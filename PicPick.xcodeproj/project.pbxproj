@@ -21,6 +21,7 @@
 		B32BB95C2B5B5F34000350DE /* PicPick_Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; };
 		B32BB95D2B5B5F34000350DE /* PicPick_Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B32BB9602B5B6237000350DE /* PPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB95F2B5B6237000350DE /* PPButton.swift */; };
+		B32BB97F2B5B64AE000350DE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B32BB97E2B5B64AE000350DE /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		B32BB9552B5B5F1A000350DE /* PicPick-Resource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PicPick-Resource.xcodeproj"; path = "../PicPick-Resource/PicPick-Resource.xcodeproj"; sourceTree = "<group>"; };
 		B32BB95F2B5B6237000350DE /* PPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPButton.swift; sourceTree = "<group>"; };
 		B32BB9782B5B6374000350DE /* PicPick-Util.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PicPick-Util.xcodeproj"; path = "../PicPick-Util/PicPick-Util.xcodeproj"; sourceTree = "<group>"; };
+		B32BB97E2B5B64AE000350DE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				B32BB9202B5B586C000350DE /* LaunchScreen.storyboard */,
 				B32BB9232B5B586C000350DE /* Info.plist */,
 				B32BB9382B5B5CE1000350DE /* InfoPlist.xcstrings */,
+				B32BB97E2B5B64AE000350DE /* Localizable.xcstrings */,
 			);
 			path = PicPick;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				B32BB9312B5B5C3B000350DE /* Pretendard-Bold.otf in Resources */,
 				B32BB9332B5B5C3B000350DE /* Pretendard-SemiBold.otf in Resources */,
 				B32BB91F2B5B586C000350DE /* Assets.xcassets in Resources */,
+				B32BB97F2B5B64AE000350DE /* Localizable.xcstrings in Resources */,
 				B32BB9322B5B5C3B000350DE /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
