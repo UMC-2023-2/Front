@@ -10,20 +10,67 @@
 		B32BB9162B5B586B000350DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9152B5B586B000350DE /* AppDelegate.swift */; };
 		B32BB9182B5B586B000350DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9172B5B586B000350DE /* SceneDelegate.swift */; };
 		B32BB91A2B5B586B000350DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9192B5B586B000350DE /* ViewController.swift */; };
-		B32BB91D2B5B586B000350DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32BB91B2B5B586B000350DE /* Main.storyboard */; };
 		B32BB91F2B5B586C000350DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32BB91E2B5B586C000350DE /* Assets.xcassets */; };
 		B32BB9222B5B586C000350DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32BB9202B5B586C000350DE /* LaunchScreen.storyboard */; };
+		B32BB9312B5B5C3B000350DE /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B32BB92E2B5B5C3B000350DE /* Pretendard-Bold.otf */; };
+		B32BB9322B5B5C3B000350DE /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B32BB92F2B5B5C3B000350DE /* Pretendard-Medium.otf */; };
+		B32BB9332B5B5C3B000350DE /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B32BB9302B5B5C3B000350DE /* Pretendard-SemiBold.otf */; };
+		B32BB9352B5B5C54000350DE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9342B5B5C54000350DE /* UIFont+Extension.swift */; };
+		B32BB9372B5B5C83000350DE /* PicPickFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9362B5B5C83000350DE /* PicPickFont.swift */; };
+		B32BB9392B5B5CE1000350DE /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B32BB9382B5B5CE1000350DE /* InfoPlist.xcstrings */; };
+		B32BB95C2B5B5F34000350DE /* PicPick_Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; };
+		B32BB95D2B5B5F34000350DE /* PicPick_Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B32BB9602B5B6237000350DE /* PPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB95F2B5B6237000350DE /* PPButton.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B32BB9592B5B5F1A000350DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B32BB9552B5B5F1A000350DE /* PicPick-Resource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B32BB9442B5B5E5D000350DE;
+			remoteInfo = "PicPick-Resource";
+		};
+		B32BB97C2B5B6374000350DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B32BB9782B5B6374000350DE /* PicPick-Util.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B32BB96B2B5B6327000350DE;
+			remoteInfo = "PicPick-Util";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B32BB95E2B5B5F35000350DE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B32BB95D2B5B5F34000350DE /* PicPick_Resource.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B32BB9122B5B586B000350DE /* PicPick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicPick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32BB9152B5B586B000350DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32BB9172B5B586B000350DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B32BB9192B5B586B000350DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B32BB91C2B5B586B000350DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B32BB91E2B5B586C000350DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32BB9212B5B586C000350DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32BB9232B5B586C000350DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32BB92E2B5B5C3B000350DE /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		B32BB92F2B5B5C3B000350DE /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		B32BB9302B5B5C3B000350DE /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		B32BB9342B5B5C54000350DE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		B32BB9362B5B5C83000350DE /* PicPickFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPickFont.swift; sourceTree = "<group>"; };
+		B32BB9382B5B5CE1000350DE /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		B32BB9552B5B5F1A000350DE /* PicPick-Resource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PicPick-Resource.xcodeproj"; path = "../PicPick-Resource/PicPick-Resource.xcodeproj"; sourceTree = "<group>"; };
+		B32BB95F2B5B6237000350DE /* PPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPButton.swift; sourceTree = "<group>"; };
+		B32BB9782B5B6374000350DE /* PicPick-Util.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PicPick-Util.xcodeproj"; path = "../PicPick-Util/PicPick-Util.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B32BB95C2B5B5F34000350DE /* PicPick_Resource.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +88,11 @@
 		B32BB9092B5B586B000350DE = {
 			isa = PBXGroup;
 			children = (
+				B32BB9782B5B6374000350DE /* PicPick-Util.xcodeproj */,
+				B32BB9552B5B5F1A000350DE /* PicPick-Resource.xcodeproj */,
 				B32BB9142B5B586B000350DE /* PicPick */,
 				B32BB9132B5B586B000350DE /* Products */,
+				B32BB95B2B5B5F34000350DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +107,68 @@
 		B32BB9142B5B586B000350DE /* PicPick */ = {
 			isa = PBXGroup;
 			children = (
+				B32BB92B2B5B5C20000350DE /* Global */,
 				B32BB9152B5B586B000350DE /* AppDelegate.swift */,
 				B32BB9172B5B586B000350DE /* SceneDelegate.swift */,
 				B32BB9192B5B586B000350DE /* ViewController.swift */,
-				B32BB91B2B5B586B000350DE /* Main.storyboard */,
 				B32BB91E2B5B586C000350DE /* Assets.xcassets */,
 				B32BB9202B5B586C000350DE /* LaunchScreen.storyboard */,
 				B32BB9232B5B586C000350DE /* Info.plist */,
+				B32BB9382B5B5CE1000350DE /* InfoPlist.xcstrings */,
 			);
 			path = PicPick;
+			sourceTree = "<group>";
+		};
+		B32BB92B2B5B5C20000350DE /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				B32BB92C2B5B5C28000350DE /* DesignSystem */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		B32BB92C2B5B5C28000350DE /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				B32BB95F2B5B6237000350DE /* PPButton.swift */,
+				B32BB92D2B5B5C2E000350DE /* Fonts */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		B32BB92D2B5B5C2E000350DE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B32BB9342B5B5C54000350DE /* UIFont+Extension.swift */,
+				B32BB9362B5B5C83000350DE /* PicPickFont.swift */,
+				B32BB92E2B5B5C3B000350DE /* Pretendard-Bold.otf */,
+				B32BB92F2B5B5C3B000350DE /* Pretendard-Medium.otf */,
+				B32BB9302B5B5C3B000350DE /* Pretendard-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B32BB9562B5B5F1A000350DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B32BB95B2B5B5F34000350DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B32BB9792B5B6374000350DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B32BB97D2B5B6374000350DE /* PicPick_Util.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +181,7 @@
 				B32BB90E2B5B586B000350DE /* Sources */,
 				B32BB90F2B5B586B000350DE /* Frameworks */,
 				B32BB9102B5B586B000350DE /* Resources */,
+				B32BB95E2B5B5F35000350DE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,10 +214,21 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = B32BB9092B5B586B000350DE;
 			productRefGroup = B32BB9132B5B586B000350DE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B32BB9562B5B5F1A000350DE /* Products */;
+					ProjectRef = B32BB9552B5B5F1A000350DE /* PicPick-Resource.xcodeproj */;
+				},
+				{
+					ProductGroup = B32BB9792B5B6374000350DE /* Products */;
+					ProjectRef = B32BB9782B5B6374000350DE /* PicPick-Util.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B32BB9112B5B586B000350DE /* PicPick */,
@@ -120,14 +236,34 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PicPick_Resource.framework;
+			remoteRef = B32BB9592B5B5F1A000350DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B32BB97D2B5B6374000350DE /* PicPick_Util.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PicPick_Util.framework;
+			remoteRef = B32BB97C2B5B6374000350DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		B32BB9102B5B586B000350DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B32BB9392B5B5CE1000350DE /* InfoPlist.xcstrings in Resources */,
 				B32BB9222B5B586C000350DE /* LaunchScreen.storyboard in Resources */,
+				B32BB9312B5B5C3B000350DE /* Pretendard-Bold.otf in Resources */,
+				B32BB9332B5B5C3B000350DE /* Pretendard-SemiBold.otf in Resources */,
 				B32BB91F2B5B586C000350DE /* Assets.xcassets in Resources */,
-				B32BB91D2B5B586B000350DE /* Main.storyboard in Resources */,
+				B32BB9322B5B5C3B000350DE /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,22 +275,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32BB91A2B5B586B000350DE /* ViewController.swift in Sources */,
+				B32BB9372B5B5C83000350DE /* PicPickFont.swift in Sources */,
 				B32BB9162B5B586B000350DE /* AppDelegate.swift in Sources */,
+				B32BB9352B5B5C54000350DE /* UIFont+Extension.swift in Sources */,
 				B32BB9182B5B586B000350DE /* SceneDelegate.swift in Sources */,
+				B32BB9602B5B6237000350DE /* PPButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B32BB91B2B5B586B000350DE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B32BB91C2B5B586B000350DE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B32BB9202B5B586C000350DE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -218,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -297,7 +428,6 @@
 				INFOPLIST_FILE = PicPick/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +455,6 @@
 				INFOPLIST_FILE = PicPick/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
