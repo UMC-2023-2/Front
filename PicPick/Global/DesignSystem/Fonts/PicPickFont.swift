@@ -63,4 +63,12 @@ public extension PicPickFont {
         
         return font
     }
+    
+    var lineHeight: CGFloat {
+        guard let value = fontProperty.LineHeight else {
+            return 0.0
+        }
+        
+        return value
+    }
 }

@@ -36,6 +36,23 @@
           }
         }
       }
+    },
+    "NSCameraUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please allow to access the camera for QR code recognition."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR코드 인식을 위해 카메라 접근을 허용해 주세요."
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

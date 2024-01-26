@@ -10,9 +10,9 @@ import UIKit
 class ViewController: UIViewController {
 
     lazy var offWhite: PPButton = {
-        let button = PPButton(color: .white, disable: true)
+        let button = PPButton(configuration: .white())
         
-        button.text = NSLocalizedString("Edit Album", comment: "Edit album button string")
+        button.setTitle(NSLocalizedString("Edit Album", comment: "Edit album button string"), for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     } ()
 
     lazy var onWhite: PPButton = {
-        let button = PPButton(color: .white)
+        let button = PPButton(configuration: .white())
         
         button.text = NSLocalizedString("Edit Album", comment: "Edit album button string")
         
@@ -30,9 +30,9 @@ class ViewController: UIViewController {
     } ()
 
     lazy var offBlack: PPButton = {
-        let button = PPButton(color: .black, disable: true)
+        let button = PPButton(configuration: .black())
         
-        button.text = NSLocalizedString("Edit Album", comment: "Edit album button string")
+        button.setTitle(NSLocalizedString("Edit Album", comment: "Edit album button string"), for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     } ()
 
     lazy var onBlack: PPButton = {
-        let button = PPButton(color: .black)
+        let button = PPButton(configuration: .black())
         
         button.text = NSLocalizedString("Edit Album", comment: "Edit album button string")
         
@@ -70,6 +70,9 @@ class ViewController: UIViewController {
         view.addSubview(offBlack)
         view.addSubview(onBlack)
         view.addSubview(label)
+        
+        offBlack.isEnabled = false
+        offWhite.isEnabled = false
         
         onBlack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         offBlack.topAnchor.constraint(equalTo: onBlack.bottomAnchor, constant: 10).isActive = true

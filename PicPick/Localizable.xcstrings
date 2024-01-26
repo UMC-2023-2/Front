@@ -17,6 +17,74 @@
           }
         }
       }
+    },
+    "Welcome Login" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Login"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기존 계정으로 로그인"
+          }
+        }
+      }
+    },
+    "Welcome Sign up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign Up"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "계정 만들고 시작하기"
+          }
+        }
+      }
+    },
+    "Welcome Subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collecting the four-cut photos scattered in the gallery,\nWrite down the memories you forgot and new ones"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "갤러리에 흩어진 네컷사진을 모아,\n잊고 있던 추억들과 새로운 추억들을 기록해보세요"
+          }
+        }
+      }
+    },
+    "Welcome Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello,\nThis is four-cut photos album, PicPick!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "안녕하세요,\n네컷사진 앨범 찍찍이 입니다!"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
