@@ -45,8 +45,8 @@ class WelcomeViewController: UIViewController {
         return label
     } ()
     
-    lazy var loginButton: PPButton = {
-        let button = PPButton(configuration: .white())
+    lazy var loginButton: PPWhiteButton = {
+        let button = PPWhiteButton(configuration: .bottom())
         
         button.setTitle(NSLocalizedString("Welcome Login", comment: "Login Button Text"), for: .normal)
         
@@ -54,8 +54,8 @@ class WelcomeViewController: UIViewController {
     } ()
     
     
-    lazy var signupButton: PPButton = {
-        let button = PPButton(configuration: .line())
+    lazy var signupButton: PPLineButton = {
+        let button = PPLineButton(configuration: .bottom())
         
         button.setTitle(NSLocalizedString("Welcome Sign up", comment: "Sign up Button Text"), for: .normal)
         
@@ -78,10 +78,17 @@ class WelcomeViewController: UIViewController {
         let blurEffect = UIBlurEffect(style: .dark)
         let visualEffectView = UIVisualEffectView(effect: blurEffect)
         
+        navigationController?.navigationBar.backIndicatorImage = R.Image.icoNavLineArrowLeft
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = R.Image.icoNavLineArrowLeft
+        navigationController?.navigationBar.tintColor = R.Color.gray900
+        
         // Do any additional setup after loading the view.
         view.insertSubview(backgroundImage, at: 0)
         view.addSubview(visualEffectView)
         view.addSubview(contentsView)
+        
+        loginButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
+        
         backgroundImage.snp.makeConstraints{
             $0.edges.equalTo(view)
         }
@@ -96,15 +103,15 @@ class WelcomeViewController: UIViewController {
             $0.right.equalToSuperview().offset(-20)
         }
         loginButton.snp.makeConstraints {
-            $0.top.equalTo(subtitleLabel.snp.bottom).offset(56)
+            $0.top.equalTo(subtitleLabel.snp.bottom).offset(62)
             $0.left.equalToSuperview().offset(16)
             $0.right.equalToSuperview().offset(-16)
         }
         signupButton.snp.makeConstraints {
-            $0.top.equalTo(loginButton.snp.bottom).offset(8)
+            $0.top.equalTo(loginButton.snp.bottom).offset(20)
             $0.left.equalToSuperview().offset(16)
             $0.right.equalToSuperview().offset(-16)
-            $0.bottom.equalToSuperview().offset(-4)
+            $0.bottom.equalToSuperview().offset(-10)
         }
         contentsView.snp.makeConstraints {
             $0.left.right.bottom.equalTo(view.safeAreaLayoutGuide)
@@ -115,4 +122,8 @@ class WelcomeViewController: UIViewController {
         }
     }
 
+    @objc
+    func loginButtonDidTap() {
+        self.navigationController?.pushViewController(LoginViewController(), animated: true)
+    }
 }

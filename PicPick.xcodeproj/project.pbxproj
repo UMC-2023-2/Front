@@ -20,7 +20,6 @@
 		B32BB9392B5B5CE1000350DE /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B32BB9382B5B5CE1000350DE /* InfoPlist.xcstrings */; };
 		B32BB95C2B5B5F34000350DE /* PicPick_Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; };
 		B32BB95D2B5B5F34000350DE /* PicPick_Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B32BB9602B5B6237000350DE /* PPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB95F2B5B6237000350DE /* PPButton.swift */; };
 		B32BB97F2B5B64AE000350DE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B32BB97E2B5B64AE000350DE /* Localizable.xcstrings */; };
 		B32BB9842B5B68CE000350DE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B32BB9832B5B68CE000350DE /* SnapKit */; };
 		B32BB9862B5B68CE000350DE /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B32BB9852B5B68CE000350DE /* SnapKit-Dynamic */; };
@@ -29,6 +28,12 @@
 		B3650CBA2B62E66600E95272 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3650CB92B62E66600E95272 /* QRViewController.swift */; };
 		B3650CBC2B62E70600E95272 /* QRReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3650CBB2B62E70600E95272 /* QRReaderView.swift */; };
 		B3650CBE2B6372DB00E95272 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3650CBD2B6372DB00E95272 /* WelcomeViewController.swift */; };
+		B3650CC72B64B3A800E95272 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3650CC62B64B3A800E95272 /* LoginViewController.swift */; };
+		B370BA212B66CA400027EF32 /* PPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA202B66CA400027EF32 /* PPTextField.swift */; };
+		B370BA232B6772C90027EF32 /* PPBlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA222B6772C90027EF32 /* PPBlackButton.swift */; };
+		B370BA272B68FC9F0027EF32 /* PPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA262B68FC9F0027EF32 /* PPButton.swift */; };
+		B370BA292B68FEC20027EF32 /* PPWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA282B68FEC20027EF32 /* PPWhiteButton.swift */; };
+		B370BA2B2B6900060027EF32 /* PPLineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA2A2B6900060027EF32 /* PPLineButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,12 +83,17 @@
 		B32BB9362B5B5C83000350DE /* PicPickFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPickFont.swift; sourceTree = "<group>"; };
 		B32BB9382B5B5CE1000350DE /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		B32BB9552B5B5F1A000350DE /* PicPick-Resource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PicPick-Resource.xcodeproj"; path = "../PicPick-Resource/PicPick-Resource.xcodeproj"; sourceTree = "<group>"; };
-		B32BB95F2B5B6237000350DE /* PPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPButton.swift; sourceTree = "<group>"; };
 		B32BB9782B5B6374000350DE /* PicPick-Util.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PicPick-Util.xcodeproj"; path = "../PicPick-Util/PicPick-Util.xcodeproj"; sourceTree = "<group>"; };
 		B32BB97E2B5B64AE000350DE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B3650CB92B62E66600E95272 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		B3650CBB2B62E70600E95272 /* QRReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderView.swift; sourceTree = "<group>"; };
 		B3650CBD2B6372DB00E95272 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B3650CC62B64B3A800E95272 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B370BA202B66CA400027EF32 /* PPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPTextField.swift; sourceTree = "<group>"; };
+		B370BA222B6772C90027EF32 /* PPBlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPBlackButton.swift; sourceTree = "<group>"; };
+		B370BA262B68FC9F0027EF32 /* PPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPButton.swift; sourceTree = "<group>"; };
+		B370BA282B68FEC20027EF32 /* PPWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPWhiteButton.swift; sourceTree = "<group>"; };
+		B370BA2A2B6900060027EF32 /* PPLineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPLineButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +138,7 @@
 				B32BB9172B5B586B000350DE /* SceneDelegate.swift */,
 				B32BB9192B5B586B000350DE /* ViewController.swift */,
 				B3650CBD2B6372DB00E95272 /* WelcomeViewController.swift */,
+				B3650CC62B64B3A800E95272 /* LoginViewController.swift */,
 				B3650CB92B62E66600E95272 /* QRViewController.swift */,
 				B32BB91E2B5B586C000350DE /* Assets.xcassets */,
 				B32BB9202B5B586C000350DE /* LaunchScreen.storyboard */,
@@ -150,8 +161,9 @@
 		B32BB92C2B5B5C28000350DE /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				B32BB9892B5B7A6B000350DE /* CommonBtn */,
+				B32BB9892B5B7A6B000350DE /* Buttons */,
 				B32BB92D2B5B5C2E000350DE /* Fonts */,
+				B370BA202B66CA400027EF32 /* PPTextField.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -191,12 +203,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B32BB9892B5B7A6B000350DE /* CommonBtn */ = {
+		B32BB9892B5B7A6B000350DE /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				B32BB95F2B5B6237000350DE /* PPButton.swift */,
+				B370BA222B6772C90027EF32 /* PPBlackButton.swift */,
+				B370BA262B68FC9F0027EF32 /* PPButton.swift */,
+				B370BA282B68FEC20027EF32 /* PPWhiteButton.swift */,
+				B370BA2A2B6900060027EF32 /* PPLineButton.swift */,
 			);
-			path = CommonBtn;
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,11 +329,16 @@
 				B32BB91A2B5B586B000350DE /* ViewController.swift in Sources */,
 				B32BB9372B5B5C83000350DE /* PicPickFont.swift in Sources */,
 				B32BB9162B5B586B000350DE /* AppDelegate.swift in Sources */,
+				B370BA212B66CA400027EF32 /* PPTextField.swift in Sources */,
+				B370BA272B68FC9F0027EF32 /* PPButton.swift in Sources */,
 				B3650CBA2B62E66600E95272 /* QRViewController.swift in Sources */,
 				B32BB9352B5B5C54000350DE /* UIFont+Extension.swift in Sources */,
+				B370BA232B6772C90027EF32 /* PPBlackButton.swift in Sources */,
 				B32BB9182B5B586B000350DE /* SceneDelegate.swift in Sources */,
 				B3650CBC2B62E70600E95272 /* QRReaderView.swift in Sources */,
-				B32BB9602B5B6237000350DE /* PPButton.swift in Sources */,
+				B370BA2B2B6900060027EF32 /* PPLineButton.swift in Sources */,
+				B370BA292B68FEC20027EF32 /* PPWhiteButton.swift in Sources */,
+				B3650CC72B64B3A800E95272 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

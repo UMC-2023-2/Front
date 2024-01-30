@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     lazy var offWhite: PPButton = {
-        let button = PPButton(configuration: .white())
+        let button = PPButton(configuration: .bottom())
         
         button.setTitle(NSLocalizedString("Edit Album", comment: "Edit album button string"), for: .normal)
         
@@ -20,9 +20,9 @@ class ViewController: UIViewController {
     } ()
 
     lazy var onWhite: PPButton = {
-        let button = PPButton(configuration: .white())
+        let button = PPButton(configuration: .bottom())
         
-        button.text = NSLocalizedString("Edit Album", comment: "Edit album button string")
+        button.setTitle(NSLocalizedString("Edit Album", comment: "Edit album button string"), for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     } ()
 
     lazy var offBlack: PPButton = {
-        let button = PPButton(configuration: .black())
+        let button = PPButton(configuration: .bottom())
         
         button.setTitle(NSLocalizedString("Edit Album", comment: "Edit album button string"), for: .normal)
         
@@ -40,9 +40,9 @@ class ViewController: UIViewController {
     } ()
 
     lazy var onBlack: PPButton = {
-        let button = PPButton(configuration: .black())
+        let button = PPButton(configuration: .bottom())
         
-        button.text = NSLocalizedString("Edit Album", comment: "Edit album button string")
+        button.setTitle(NSLocalizedString("Edit Album", comment: "Edit album button string"), for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         
