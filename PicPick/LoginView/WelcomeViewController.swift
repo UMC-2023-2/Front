@@ -46,7 +46,7 @@ class WelcomeViewController: UIViewController {
     } ()
     
     lazy var loginButton: PPWhiteButton = {
-        let button = PPWhiteButton(configuration: .bottom())
+        let button = PPWhiteButton(buttonStyle: .bottom)
         
         button.setTitle(NSLocalizedString("Welcome Login", comment: "Login Button Text"), for: .normal)
         
@@ -55,7 +55,7 @@ class WelcomeViewController: UIViewController {
     
     
     lazy var signupButton: PPLineButton = {
-        let button = PPLineButton(configuration: .bottom())
+        let button = PPLineButton(buttonStyle: .bottom)
         
         button.setTitle(NSLocalizedString("Welcome Sign up", comment: "Sign up Button Text"), for: .normal)
         
@@ -88,6 +88,7 @@ class WelcomeViewController: UIViewController {
         view.addSubview(contentsView)
         
         loginButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
+        signupButton.addTarget(self, action: #selector(signupButtonDidTap), for: .touchUpInside)
         
         backgroundImage.snp.makeConstraints{
             $0.edges.equalTo(view)
@@ -125,5 +126,10 @@ class WelcomeViewController: UIViewController {
     @objc
     func loginButtonDidTap() {
         self.navigationController?.pushViewController(LoginViewController(), animated: true)
+    }
+    
+    @objc
+    func signupButtonDidTap() {
+        self.navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
 }

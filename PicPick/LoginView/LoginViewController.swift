@@ -39,7 +39,6 @@ class LoginViewController: UIViewController {
     
     lazy var pwTextField: PPTextField = {
         let textField = PPTextField(placeholder: NSLocalizedString("Login Password Placeholder", comment: "Login page Password textfield placeholder"))
-        textField.becomeFirstResponder()
         textField.isSecureTextEntry = true
         textField.textContentType = .password
         textField.enablePasswordToggle()
@@ -47,7 +46,7 @@ class LoginViewController: UIViewController {
     } ()
     
     lazy var loginBtn: PPButton = {
-        let button = PPBlackButton(configuration: .bottom())
+        let button = PPBlackButton(buttonStyle: .bottom)
         button.setTitle(NSLocalizedString("Login Button", comment: "Login Button String"), for: .normal)
         button.isEnabled = false
         return button
@@ -57,7 +56,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        title = "로그인"
+        title = NSLocalizedString("Login Title", comment: "Login page navigationvar title")
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PicPickFont.titleLarge700.font]
         navigationController?.navigationBar.topItem?.title = ""
         view.backgroundColor = .white
@@ -75,6 +74,7 @@ class LoginViewController: UIViewController {
         }
         
         idTextField.snp.makeConstraints {
+            $0.height.equalTo(48)
             $0.left.equalTo(view.safeAreaLayoutGuide).offset(16)
             $0.right.equalTo(view.safeAreaLayoutGuide).offset(-16)
             $0.top.equalTo(idLabel.snp.bottom).offset(10)
@@ -86,6 +86,7 @@ class LoginViewController: UIViewController {
         }
         
         pwTextField.snp.makeConstraints {
+            $0.height.equalTo(48)
             $0.left.equalTo(view.safeAreaLayoutGuide).offset(16)
             $0.right.equalTo(view.safeAreaLayoutGuide).offset(-16)
             $0.top.equalTo(pwLabel.snp.bottom).offset(10)

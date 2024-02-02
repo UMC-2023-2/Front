@@ -34,6 +34,7 @@
 		B370BA272B68FC9F0027EF32 /* PPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA262B68FC9F0027EF32 /* PPButton.swift */; };
 		B370BA292B68FEC20027EF32 /* PPWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA282B68FEC20027EF32 /* PPWhiteButton.swift */; };
 		B370BA2B2B6900060027EF32 /* PPLineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA2A2B6900060027EF32 /* PPLineButton.swift */; };
+		B370BA2E2B6A6F100027EF32 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA2D2B6A6F100027EF32 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		B370BA262B68FC9F0027EF32 /* PPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPButton.swift; sourceTree = "<group>"; };
 		B370BA282B68FEC20027EF32 /* PPWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPWhiteButton.swift; sourceTree = "<group>"; };
 		B370BA2A2B6900060027EF32 /* PPLineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPLineButton.swift; sourceTree = "<group>"; };
+		B370BA2D2B6A6F100027EF32 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,11 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				B32BB92B2B5B5C20000350DE /* Global */,
+				B370BA2C2B6A6E8C0027EF32 /* LoginView */,
 				B32BB9152B5B586B000350DE /* AppDelegate.swift */,
 				B32BB9172B5B586B000350DE /* SceneDelegate.swift */,
 				B32BB9192B5B586B000350DE /* ViewController.swift */,
-				B3650CBD2B6372DB00E95272 /* WelcomeViewController.swift */,
-				B3650CC62B64B3A800E95272 /* LoginViewController.swift */,
 				B3650CB92B62E66600E95272 /* QRViewController.swift */,
 				B32BB91E2B5B586C000350DE /* Assets.xcassets */,
 				B32BB9202B5B586C000350DE /* LaunchScreen.storyboard */,
@@ -212,6 +213,16 @@
 				B370BA2A2B6900060027EF32 /* PPLineButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		B370BA2C2B6A6E8C0027EF32 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				B3650CBD2B6372DB00E95272 /* WelcomeViewController.swift */,
+				B3650CC62B64B3A800E95272 /* LoginViewController.swift */,
+				B370BA2D2B6A6F100027EF32 /* SignUpViewController.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +345,7 @@
 				B3650CBA2B62E66600E95272 /* QRViewController.swift in Sources */,
 				B32BB9352B5B5C54000350DE /* UIFont+Extension.swift in Sources */,
 				B370BA232B6772C90027EF32 /* PPBlackButton.swift in Sources */,
+				B370BA2E2B6A6F100027EF32 /* SignUpViewController.swift in Sources */,
 				B32BB9182B5B586B000350DE /* SceneDelegate.swift in Sources */,
 				B3650CBC2B62E70600E95272 /* QRReaderView.swift in Sources */,
 				B370BA2B2B6900060027EF32 /* PPLineButton.swift in Sources */,

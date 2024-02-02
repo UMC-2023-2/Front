@@ -9,7 +9,7 @@ import UIKit
 
 import PicPick_Resource
 
-class PPWhiteButton: UIButton {
+class PPWhiteButton: PPButton {
     override func updateConfiguration() {
         guard let configuration = configuration else {
             return
@@ -25,11 +25,25 @@ class PPWhiteButton: UIButton {
         case .disabled:
             foregroundColor = R.Color.gray600
             backgroundColor = R.Color.gray300
-            font = PicPickFont.titleMedium500.font
+            switch buttonStyle {
+            case .bottom:
+                font = PicPickFont.titleMedium500.font
+            case .content:
+                font = PicPickFont.bodyLarge500.font
+            case .textfield:
+                font = PicPickFont.bodyLarge500.font
+            }
         default:
             foregroundColor = R.Color.gray900
             backgroundColor = R.Color.systemWhite
-            font = PicPickFont.titleMedium700.font
+            switch buttonStyle {
+            case .bottom:
+                font = PicPickFont.titleMedium700.font
+            case .content:
+                font = PicPickFont.bodyLarge700.font
+            case .textfield:
+                font = PicPickFont.bodyLarge500.font
+            }
         }
         updatedConfiguration.baseForegroundColor = foregroundColor
         updatedConfiguration.baseBackgroundColor = backgroundColor

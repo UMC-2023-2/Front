@@ -26,6 +26,16 @@ class PPTextField: UITextField {
         font = PicPickFont.bodyLarge500.font
         layer.cornerRadius = 24
         clipsToBounds = true
+        let style = NSMutableParagraphStyle()
+        style.maximumLineHeight = PicPickFont.bodyLarge500.lineHeight
+        style.minimumLineHeight = PicPickFont.bodyLarge500.lineHeight
+
+        let attributes: [NSAttributedString.Key: Any] = [
+            .paragraphStyle: style,
+            .baselineOffset: (PicPickFont.bodyLarge500.lineHeight - font!.lineHeight),
+            .font: PicPickFont.bodyLarge500.font
+        ]
+        defaultTextAttributes = attributes
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {

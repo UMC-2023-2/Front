@@ -9,7 +9,7 @@ import UIKit
 
 import PicPick_Resource
 
-class PPLineButton: UIButton {
+class PPLineButton: PPButton {
     override func updateConfiguration() {
         guard let configuration = configuration else {
             return
@@ -30,11 +30,25 @@ class PPLineButton: UIButton {
         case .disabled:
             foregroundColor = R.Color.gray500
             strokeColor = R.Color.gray300
-            font = PicPickFont.titleMedium500.font
+            switch buttonStyle {
+            case .bottom:
+                font = PicPickFont.titleMedium500.font
+            case .content:
+                font = PicPickFont.bodyLarge500.font
+            case .textfield:
+                font = PicPickFont.bodyLarge500.font
+            }
         default:
             foregroundColor = R.Color.gray300
             strokeColor = R.Color.gray400
-            font = PicPickFont.titleMedium700.font
+            switch buttonStyle {
+            case .bottom:
+                font = PicPickFont.titleMedium700.font
+            case .content:
+                font = PicPickFont.bodyLarge700.font
+            case .textfield:
+                font = PicPickFont.bodyLarge500.font
+            }
         }
         
         background.strokeColor = strokeColor

@@ -26,11 +26,25 @@ class PPBlackButton: PPButton {
         case .disabled:
             foregroundColor = R.Color.gray800
             backgroundColor = R.Color.gray700
-            font = PicPickFont.titleMedium500.font
+            switch buttonStyle {
+            case .bottom:
+                font = PicPickFont.titleMedium500.font
+            case .content:
+                font = PicPickFont.bodyLarge500.font
+            case .textfield:
+                font = PicPickFont.bodyLarge500.font
+            }
         default:
             foregroundColor = R.Color.gray300
             backgroundColor = R.Color.gray900
-            font = PicPickFont.titleMedium700.font
+            switch buttonStyle {
+            case .bottom:
+                font = PicPickFont.titleMedium700.font
+            case .content:
+                font = PicPickFont.bodyLarge700.font
+            case .textfield:
+                font = PicPickFont.bodyLarge500.font
+            }
         }
         updatedConfiguration.baseForegroundColor = foregroundColor
         updatedConfiguration.baseBackgroundColor = backgroundColor
