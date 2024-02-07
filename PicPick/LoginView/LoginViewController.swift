@@ -9,8 +9,12 @@ import UIKit
 
 import SnapKit
 import PicPick_Resource
+import PicPick_Util
 
 class LoginViewController: UIViewController {
+    
+    var id = String()
+    var password = String()
     
     lazy var idLabel: UILabel = {
         let label = UILabel()
@@ -26,6 +30,7 @@ class LoginViewController: UIViewController {
         textField.textContentType = .username
         textField.keyboardType = .asciiCapable
         textField.clearButtonMode = .always
+        textField.addTarget(self, action: #selector(idTextFieldEditingChange(_:)), for: .editingChanged)
         return textField
     } ()
     
@@ -41,6 +46,7 @@ class LoginViewController: UIViewController {
         let textField = PPTextField(placeholder: NSLocalizedString("Login Password Placeholder", comment: "Login page Password textfield placeholder"))
         textField.isSecureTextEntry = true
         textField.textContentType = .password
+        textField.addTarget(self, action: #selector(pwTextFieldEditingChange(_:)), for: .editingChanged)
         textField.enablePasswordToggle()
         return textField
     } ()
@@ -49,6 +55,7 @@ class LoginViewController: UIViewController {
         let button = PPBlackButton(buttonStyle: .bottom)
         button.setTitle(NSLocalizedString("Login Button", comment: "Login Button String"), for: .normal)
         button.isEnabled = false
+        button.addTarget(self, action: #selector(loginBtnDidTap(_:)), for: .touchUpInside)
         return button
     } ()
 
@@ -58,7 +65,6 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         title = NSLocalizedString("Login Title", comment: "Login page navigationvar title")
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PicPickFont.titleLarge700.font]
-        navigationController?.navigationBar.topItem?.title = ""
         view.backgroundColor = .white
         
         view.addSubview(idLabel)
@@ -99,15 +105,25 @@ class LoginViewController: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc
+    func idTextFieldEditingChange(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        loginBtn.isEnabled = (password.count > 2 && text.count > 2)
+        id = text
     }
-    */
-
+    
+    @objc
+    func pwTextFieldEditingChange(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        loginBtn.isEnabled = (text.count > 2 && id.count > 2)
+        password = text
+    }
+    
+    @objc
+    func loginBtnDidTap(_ sender: UIButton) {
+        let mainVC = UINavigationController(rootViewController: ViewController())
+        mainVC.modalPresentationStyle = .fullScreen
+        present(mainVC, animated: true)
+    }
+    
 }

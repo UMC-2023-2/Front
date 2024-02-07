@@ -39,7 +39,7 @@ class PPLineButton: PPButton {
                 font = PicPickFont.bodyLarge500.font
             }
         default:
-            foregroundColor = R.Color.gray300
+            foregroundColor = R.Color.gray700
             strokeColor = R.Color.gray400
             switch buttonStyle {
             case .bottom:

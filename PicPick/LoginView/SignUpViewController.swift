@@ -83,7 +83,6 @@ class SignUpViewController: UIViewController {
 
         title = NSLocalizedString("SignUp Title", comment: "SignUp page navigationvar title")
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PicPickFont.titleLarge700.font]
-        navigationController?.navigationBar.topItem?.title = ""
         view.backgroundColor = .white
         
         view.addSubview(idLabel)

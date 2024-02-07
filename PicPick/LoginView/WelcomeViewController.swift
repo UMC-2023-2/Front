@@ -54,9 +54,11 @@ class WelcomeViewController: UIViewController {
     } ()
     
     
-    lazy var signupButton: PPLineButton = {
-        let button = PPLineButton(buttonStyle: .bottom)
-        
+    lazy var signupButton: PPButton = {
+        let button = PPButton(buttonStyle: .bottom)
+        button.configuration?.baseForegroundColor = R.Color.gray300
+        button.configuration?.background.strokeColor = R.Color.gray400
+        button.configuration?.background.backgroundColor = .clear
         button.setTitle(NSLocalizedString("Welcome Sign up", comment: "Sign up Button Text"), for: .normal)
         
         return button
@@ -81,6 +83,7 @@ class WelcomeViewController: UIViewController {
         navigationController?.navigationBar.backIndicatorImage = R.Image.icoNavLineArrowLeft
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = R.Image.icoNavLineArrowLeft
         navigationController?.navigationBar.tintColor = R.Color.gray900
+        navigationItem.backButtonTitle = ""
         
         // Do any additional setup after loading the view.
         view.insertSubview(backgroundImage, at: 0)

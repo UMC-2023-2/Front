@@ -7,10 +7,12 @@
 
 import UIKit
 
+import PicPick_Resource
+
 class ViewController: UIViewController {
 
     lazy var offWhite: PPButton = {
-        let button = PPButton(configuration: .bottom())
+        let button = PPBlackButton(configuration: .bottom())
         
         button.setTitle(NSLocalizedString("Edit Album", comment: "Edit album button string"), for: .normal)
         
@@ -65,6 +67,11 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .orange
         
+        navigationController?.navigationBar.backIndicatorImage = R.Image.icoNavLineArrowLeft
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = R.Image.icoNavLineArrowLeft
+        navigationController?.navigationBar.tintColor = R.Color.gray900
+        navigationItem.backButtonTitle = ""
+        
         view.addSubview(offWhite)
         view.addSubview(onWhite)
         view.addSubview(offBlack)
@@ -72,13 +79,14 @@ class ViewController: UIViewController {
         view.addSubview(label)
         
         offBlack.isEnabled = false
-        offWhite.isEnabled = false
         
         onBlack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         offBlack.topAnchor.constraint(equalTo: onBlack.bottomAnchor, constant: 10).isActive = true
         onWhite.topAnchor.constraint(equalTo: offBlack.bottomAnchor, constant: 10).isActive = true
         offWhite.topAnchor.constraint(equalTo: onWhite.bottomAnchor, constant: 10).isActive = true
         label.topAnchor.constraint(equalTo: offWhite.bottomAnchor, constant: 10).isActive = true
+        
+        offWhite.addTarget(self, action: #selector(offWhiteDidTap(_:)), for: .touchUpInside)
         
         offWhite.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
         onWhite.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
@@ -87,6 +95,10 @@ class ViewController: UIViewController {
         label.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
     }
 
+    @objc
+    func offWhiteDidTap(_ sender: PPBlackButton) {
+        self.navigationController?.pushViewController(QRViewController(), animated: true)
+    }
 
 }
 

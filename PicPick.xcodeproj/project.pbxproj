@@ -18,13 +18,13 @@
 		B32BB9352B5B5C54000350DE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9342B5B5C54000350DE /* UIFont+Extension.swift */; };
 		B32BB9372B5B5C83000350DE /* PicPickFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9362B5B5C83000350DE /* PicPickFont.swift */; };
 		B32BB9392B5B5CE1000350DE /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B32BB9382B5B5CE1000350DE /* InfoPlist.xcstrings */; };
-		B32BB95C2B5B5F34000350DE /* PicPick_Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; };
-		B32BB95D2B5B5F34000350DE /* PicPick_Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B32BB95C2B5B5F34000350DE /* PicPick_Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; platformFilter = ios; };
+		B32BB95D2B5B5F34000350DE /* PicPick_Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B32BB97F2B5B64AE000350DE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B32BB97E2B5B64AE000350DE /* Localizable.xcstrings */; };
 		B32BB9842B5B68CE000350DE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B32BB9832B5B68CE000350DE /* SnapKit */; };
 		B32BB9862B5B68CE000350DE /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B32BB9852B5B68CE000350DE /* SnapKit-Dynamic */; };
-		B32BB9872B5B6C3D000350DE /* PicPick_Util.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB97D2B5B6374000350DE /* PicPick_Util.framework */; };
-		B32BB9882B5B6C3D000350DE /* PicPick_Util.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB97D2B5B6374000350DE /* PicPick_Util.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B32BB9872B5B6C3D000350DE /* PicPick_Util.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB97D2B5B6374000350DE /* PicPick_Util.framework */; platformFilter = ios; };
+		B32BB9882B5B6C3D000350DE /* PicPick_Util.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB97D2B5B6374000350DE /* PicPick_Util.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3650CBA2B62E66600E95272 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3650CB92B62E66600E95272 /* QRViewController.swift */; };
 		B3650CBC2B62E70600E95272 /* QRReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3650CBB2B62E70600E95272 /* QRReaderView.swift */; };
 		B3650CBE2B6372DB00E95272 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3650CBD2B6372DB00E95272 /* WelcomeViewController.swift */; };
@@ -35,6 +35,9 @@
 		B370BA292B68FEC20027EF32 /* PPWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA282B68FEC20027EF32 /* PPWhiteButton.swift */; };
 		B370BA2B2B6900060027EF32 /* PPLineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA2A2B6900060027EF32 /* PPLineButton.swift */; };
 		B370BA2E2B6A6F100027EF32 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA2D2B6A6F100027EF32 /* SignUpViewController.swift */; };
+		B370BA5A2B724EC40027EF32 /* EditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA592B724EC40027EF32 /* EditImageViewController.swift */; };
+		B370BA5D2B7250750027EF32 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = B370BA5C2B7250750027EF32 /* CropViewController */; };
+		B370BA632B73AFE50027EF32 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA622B73AFE50027EF32 /* NewProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,8 @@
 		B370BA282B68FEC20027EF32 /* PPWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPWhiteButton.swift; sourceTree = "<group>"; };
 		B370BA2A2B6900060027EF32 /* PPLineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPLineButton.swift; sourceTree = "<group>"; };
 		B370BA2D2B6A6F100027EF32 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B370BA592B724EC40027EF32 /* EditImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageViewController.swift; sourceTree = "<group>"; };
+		B370BA622B73AFE50027EF32 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +111,7 @@
 				B32BB95C2B5B5F34000350DE /* PicPick_Resource.framework in Frameworks */,
 				B32BB9842B5B68CE000350DE /* SnapKit in Frameworks */,
 				B32BB9872B5B6C3D000350DE /* PicPick_Util.framework in Frameworks */,
+				B370BA5D2B7250750027EF32 /* CropViewController in Frameworks */,
 				B32BB9862B5B68CE000350DE /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +147,7 @@
 				B32BB9172B5B586B000350DE /* SceneDelegate.swift */,
 				B32BB9192B5B586B000350DE /* ViewController.swift */,
 				B3650CB92B62E66600E95272 /* QRViewController.swift */,
+				B370BA592B724EC40027EF32 /* EditImageViewController.swift */,
 				B32BB91E2B5B586C000350DE /* Assets.xcassets */,
 				B32BB9202B5B586C000350DE /* LaunchScreen.storyboard */,
 				B32BB9232B5B586C000350DE /* Info.plist */,
@@ -221,6 +228,7 @@
 				B3650CBD2B6372DB00E95272 /* WelcomeViewController.swift */,
 				B3650CC62B64B3A800E95272 /* LoginViewController.swift */,
 				B370BA2D2B6A6F100027EF32 /* SignUpViewController.swift */,
+				B370BA622B73AFE50027EF32 /* NewProfileViewController.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 			packageProductDependencies = (
 				B32BB9832B5B68CE000350DE /* SnapKit */,
 				B32BB9852B5B68CE000350DE /* SnapKit-Dynamic */,
+				B370BA5C2B7250750027EF32 /* CropViewController */,
 			);
 			productName = PicPick;
 			productReference = B32BB9122B5B586B000350DE /* PicPick.app */;
@@ -277,6 +286,7 @@
 			mainGroup = B32BB9092B5B586B000350DE;
 			packageReferences = (
 				B32BB9822B5B68CE000350DE /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B370BA5B2B7250750027EF32 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
 			);
 			productRefGroup = B32BB9132B5B586B000350DE /* Products */;
 			projectDirPath = "";
@@ -336,10 +346,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B370BA5A2B724EC40027EF32 /* EditImageViewController.swift in Sources */,
 				B3650CBE2B6372DB00E95272 /* WelcomeViewController.swift in Sources */,
 				B32BB91A2B5B586B000350DE /* ViewController.swift in Sources */,
 				B32BB9372B5B5C83000350DE /* PicPickFont.swift in Sources */,
 				B32BB9162B5B586B000350DE /* AppDelegate.swift in Sources */,
+				B370BA632B73AFE50027EF32 /* NewProfileViewController.swift in Sources */,
 				B370BA212B66CA400027EF32 /* PPTextField.swift in Sources */,
 				B370BA272B68FC9F0027EF32 /* PPButton.swift in Sources */,
 				B3650CBA2B62E66600E95272 /* QRViewController.swift in Sources */,
@@ -509,6 +521,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = UMC.PicPick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,6 +551,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = UMC.PicPick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -575,6 +591,14 @@
 				minimumVersion = 5.7.0;
 			};
 		};
+		B370BA5B2B7250750027EF32 /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -587,6 +611,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B32BB9822B5B68CE000350DE /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		B370BA5C2B7250750027EF32 /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B370BA5B2B7250750027EF32 /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
