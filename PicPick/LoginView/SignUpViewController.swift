@@ -8,13 +8,14 @@
 import UIKit
 
 import PicPick_Resource
+import PicPick_Util
 import SnapKit
 
 class SignUpViewController: UIViewController {
     
     lazy var idLabel: UILabel = {
         let label = UILabel()
-        label.font = PicPickFont.titleLarge700.font
+        label.font = PPFont.titleLarge700.font
         label.textColor = R.Color.gray900
         label.text = NSLocalizedString("SignUp ID Label", comment: "SignUp page ID Lable")
         return label
@@ -31,7 +32,7 @@ class SignUpViewController: UIViewController {
     
     lazy var pwLabel: UILabel = {
         let label = UILabel()
-        label.font = PicPickFont.titleLarge700.font
+        label.font = PPFont.titleLarge700.font
         label.textColor = R.Color.gray900
         label.text = NSLocalizedString("SignUp New Password Label", comment: "SignUp page New Password Lable")
         return label
@@ -48,7 +49,7 @@ class SignUpViewController: UIViewController {
     
     lazy var rePasswordLabel: UILabel = {
         let label = UILabel()
-        label.font = PicPickFont.titleLarge700.font
+        label.font = PPFont.titleLarge700.font
         label.textColor = R.Color.gray900
         label.text = NSLocalizedString("SignUp Re-enter Password Label", comment: "SignUp page ID Lable")
         return label
@@ -81,8 +82,10 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        removeBackBtnTitle()
+        
         title = NSLocalizedString("SignUp Title", comment: "SignUp page navigationvar title")
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PicPickFont.titleLarge700.font]
+        
         view.backgroundColor = .white
         
         view.addSubview(idLabel)

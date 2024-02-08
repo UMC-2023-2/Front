@@ -32,22 +32,22 @@ class PPLineButton: PPButton {
             strokeColor = R.Color.gray300
             switch buttonStyle {
             case .bottom:
-                font = PicPickFont.titleMedium500.font
+                font = PPFont.titleMedium500.font
             case .content:
-                font = PicPickFont.bodyLarge500.font
+                font = PPFont.bodyLarge500.font
             case .textfield:
-                font = PicPickFont.bodyLarge500.font
+                font = PPFont.bodyLarge500.font
             }
         default:
             foregroundColor = R.Color.gray700
             strokeColor = R.Color.gray400
             switch buttonStyle {
             case .bottom:
-                font = PicPickFont.titleMedium700.font
+                font = PPFont.titleMedium700.font
             case .content:
-                font = PicPickFont.bodyLarge700.font
+                font = PPFont.bodyLarge700.font
             case .textfield:
-                font = PicPickFont.bodyLarge500.font
+                font = PPFont.bodyLarge500.font
             }
         }
         

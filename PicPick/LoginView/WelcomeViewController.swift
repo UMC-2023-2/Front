@@ -26,9 +26,9 @@ class WelcomeViewController: UIViewController {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         
-        label.setTextWithLineHeight(text: NSLocalizedString("Welcome Title", comment: "Welcome Title Label Text"), lineHeight: PicPickFont.headlineLarge700.lineHeight)
+        label.setTextWithLineHeight(text: NSLocalizedString("Welcome Title", comment: "Welcome Title Label Text"), lineHeight: PPFont.headlineLarge700.lineHeight)
         label.numberOfLines = 0
-        label.font = PicPickFont.headlineLarge700.font
+        label.font = PPFont.headlineLarge700.font
         label.textColor = R.Color.systemWhite
         
         return label
@@ -37,9 +37,9 @@ class WelcomeViewController: UIViewController {
     lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         
-        label.setTextWithLineHeight(text: NSLocalizedString("Welcome Subtitle", comment: "Welcome Subtltie Label Text"), lineHeight: PicPickFont.bodyLarge500.lineHeight)
+        label.setTextWithLineHeight(text: NSLocalizedString("Welcome Subtitle", comment: "Welcome Subtltie Label Text"), lineHeight: PPFont.bodyLarge500.lineHeight)
         label.numberOfLines = 0
-        label.font = PicPickFont.bodyLarge500.font
+        label.font = PPFont.bodyLarge500.font
         label.textColor = R.Color.gray400
         
         return label
@@ -59,6 +59,11 @@ class WelcomeViewController: UIViewController {
         button.configuration?.baseForegroundColor = R.Color.gray300
         button.configuration?.background.strokeColor = R.Color.gray400
         button.configuration?.background.backgroundColor = .clear
+        button.configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var outgoing = incoming
+            outgoing.font = PPFont.titleMedium500.font
+            return outgoing
+        }
         button.setTitle(NSLocalizedString("Welcome Sign up", comment: "Sign up Button Text"), for: .normal)
         
         return button
@@ -77,13 +82,10 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        removeBackBtnTitle()
+        
         let blurEffect = UIBlurEffect(style: .dark)
         let visualEffectView = UIVisualEffectView(effect: blurEffect)
-        
-        navigationController?.navigationBar.backIndicatorImage = R.Image.icoNavLineArrowLeft
-        navigationController?.navigationBar.backIndicatorTransitionMaskImage = R.Image.icoNavLineArrowLeft
-        navigationController?.navigationBar.tintColor = R.Color.gray900
-        navigationItem.backButtonTitle = ""
         
         // Do any additional setup after loading the view.
         view.insertSubview(backgroundImage, at: 0)

@@ -23,17 +23,17 @@ class PPTextField: UITextField {
         backgroundColor = R.Color.gray300
         textColor = R.Color.gray700
         autocapitalizationType = .none
-        font = PicPickFont.bodyLarge500.font
+        font = PPFont.bodyLarge500.font
         layer.cornerRadius = 24
         clipsToBounds = true
         let style = NSMutableParagraphStyle()
-        style.maximumLineHeight = PicPickFont.bodyLarge500.lineHeight
-        style.minimumLineHeight = PicPickFont.bodyLarge500.lineHeight
+        style.maximumLineHeight = PPFont.bodyLarge500.lineHeight
+        style.minimumLineHeight = PPFont.bodyLarge500.lineHeight
 
         let attributes: [NSAttributedString.Key: Any] = [
             .paragraphStyle: style,
-            .baselineOffset: (PicPickFont.bodyLarge500.lineHeight - font!.lineHeight),
-            .font: PicPickFont.bodyLarge500.font
+            .baselineOffset: (PPFont.bodyLarge500.lineHeight - font!.lineHeight),
+            .font: PPFont.bodyLarge500.font
         ]
         defaultTextAttributes = attributes
     }
@@ -65,9 +65,9 @@ class PPTextField: UITextField {
     
     fileprivate func setPasswordToggleImage(_ button: UIButton) {
         if(isSecureTextEntry){
-            button.setImage(R.Image.icoEye.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.setImage(R.Image.icoEye24.withRenderingMode(.alwaysTemplate), for: .normal)
         }else{
-            button.setImage(R.Image.icoEyeHide.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.setImage(R.Image.icoEyeHide24.withRenderingMode(.alwaysTemplate), for: .normal)
         }
     }
     

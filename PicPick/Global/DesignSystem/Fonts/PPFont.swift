@@ -14,7 +14,7 @@ public struct FontProperty {
     let LineHeight: CGFloat?
 }
 
-public enum PicPickFont {
+public enum PPFont {
     case headlineLarge700
     case headlineMedium700
     
@@ -55,7 +55,7 @@ public enum PicPickFont {
     }
 }
 
-public extension PicPickFont {
+public extension PPFont {
     var font: UIFont {
         guard let font = UIFont(name: fontProperty.font.name, size: fontProperty.size) else {
             return UIFont()

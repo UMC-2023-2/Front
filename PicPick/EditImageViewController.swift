@@ -44,9 +44,9 @@ class EditImageViewController: UIViewController {
     lazy var subLabel: UILabel = {
         let label = UILabel()
         
-        label.setTextWithLineHeight(text: NSLocalizedString("Edit Image Sub", comment: "Edit Image page Label Text"), lineHeight: PicPickFont.bodyLarge500.lineHeight)
+        label.setTextWithLineHeight(text: NSLocalizedString("Edit Image Sub", comment: "Edit Image page Label Text"), lineHeight: PPFont.bodyLarge500.lineHeight)
         label.numberOfLines = 0
-        label.font = PicPickFont.bodyLarge500.font
+        label.font = PPFont.bodyLarge500.font
         label.textColor = R.Color.gray700
         
         return label
@@ -75,7 +75,7 @@ class EditImageViewController: UIViewController {
         super.viewDidLoad()
 
         title = NSLocalizedString("Edit Image Title", comment: "Edit Image page navigationvar title")
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PicPickFont.titleLarge700.font]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PPFont.titleLarge700.font]
 
         view.backgroundColor = .white
         // Do any additional setup after loading the view.
@@ -107,6 +107,8 @@ class EditImageViewController: UIViewController {
             }
         
         }
+        
+        nextButton.addTarget(self, action: #selector(saveImageInPhotos), for: .touchUpInside)
         
         for (index, croppedImage) in croppedImages.enumerated() {
             let imageView = UIImageView()
@@ -150,6 +152,13 @@ class EditImageViewController: UIViewController {
         // Return image to UIImage
         let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
         return croppedImage
+    }
+    
+    @objc
+    func saveImageInPhotos() {
+        croppedImages.forEach { image in
+            UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+        }
     }
 }
 

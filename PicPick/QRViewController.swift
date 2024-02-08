@@ -24,7 +24,7 @@ class QRViewController: UIViewController {
         super.viewDidLoad()
         
         title = NSLocalizedString("QR Title", comment: "QR page navigationvar title")
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PicPickFont.titleLarge700.font]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PPFont.titleLarge700.font]
         navigationItem.backButtonTitle = ""
         view.backgroundColor = .white
         

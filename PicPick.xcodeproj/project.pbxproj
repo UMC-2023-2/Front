@@ -9,14 +9,11 @@
 /* Begin PBXBuildFile section */
 		B32BB9162B5B586B000350DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9152B5B586B000350DE /* AppDelegate.swift */; };
 		B32BB9182B5B586B000350DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9172B5B586B000350DE /* SceneDelegate.swift */; };
-		B32BB91A2B5B586B000350DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9192B5B586B000350DE /* ViewController.swift */; };
+		B32BB91A2B5B586B000350DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9192B5B586B000350DE /* HomeViewController.swift */; };
 		B32BB91F2B5B586C000350DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32BB91E2B5B586C000350DE /* Assets.xcassets */; };
 		B32BB9222B5B586C000350DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32BB9202B5B586C000350DE /* LaunchScreen.storyboard */; };
-		B32BB9312B5B5C3B000350DE /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B32BB92E2B5B5C3B000350DE /* Pretendard-Bold.otf */; };
-		B32BB9322B5B5C3B000350DE /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B32BB92F2B5B5C3B000350DE /* Pretendard-Medium.otf */; };
-		B32BB9332B5B5C3B000350DE /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B32BB9302B5B5C3B000350DE /* Pretendard-SemiBold.otf */; };
 		B32BB9352B5B5C54000350DE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9342B5B5C54000350DE /* UIFont+Extension.swift */; };
-		B32BB9372B5B5C83000350DE /* PicPickFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9362B5B5C83000350DE /* PicPickFont.swift */; };
+		B32BB9372B5B5C83000350DE /* PPFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BB9362B5B5C83000350DE /* PPFont.swift */; };
 		B32BB9392B5B5CE1000350DE /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B32BB9382B5B5CE1000350DE /* InfoPlist.xcstrings */; };
 		B32BB95C2B5B5F34000350DE /* PicPick_Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; platformFilter = ios; };
 		B32BB95D2B5B5F34000350DE /* PicPick_Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB95A2B5B5F1A000350DE /* PicPick_Resource.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -38,6 +35,19 @@
 		B370BA5A2B724EC40027EF32 /* EditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA592B724EC40027EF32 /* EditImageViewController.swift */; };
 		B370BA5D2B7250750027EF32 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = B370BA5C2B7250750027EF32 /* CropViewController */; };
 		B370BA632B73AFE50027EF32 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA622B73AFE50027EF32 /* NewProfileViewController.swift */; };
+		B370BA662B73FBB00027EF32 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA652B73FBB00027EF32 /* CollectionViewCell.swift */; };
+		B370BA682B73FBFA0027EF32 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA672B73FBFA0027EF32 /* TableViewCell.swift */; };
+		B370BA6A2B7420230027EF32 /* CurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA692B7420230027EF32 /* CurationViewController.swift */; };
+		B370BA6C2B7422C90027EF32 /* PhotoCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA6B2B7422C90027EF32 /* PhotoCardCollectionViewCell.swift */; };
+		B370BA6E2B7423410027EF32 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA6D2B7423410027EF32 /* AddPhotoViewController.swift */; };
+		B370BA712B74238E0027EF32 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = B370BA702B74238E0027EF32 /* Tabman */; };
+		B370BA742B7423C40027EF32 /* Pageboy in Frameworks */ = {isa = PBXBuildFile; productRef = B370BA732B7423C40027EF32 /* Pageboy */; };
+		B370BA762B7424A20027EF32 /* ImageContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA752B7424A20027EF32 /* ImageContainerCollectionViewCell.swift */; };
+		B370BA782B7424DE0027EF32 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA772B7424DE0027EF32 /* SearchViewController.swift */; };
+		B370BA7A2B749BE40027EF32 /* PPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370BA792B749BE40027EF32 /* PPNavigationController.swift */; };
+		B370BA922B74A8010027EF32 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B370BA8F2B74A8010027EF32 /* Pretendard-Medium.otf */; };
+		B370BA932B74A8010027EF32 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B370BA902B74A8010027EF32 /* Pretendard-Bold.otf */; };
+		B370BA942B74A8010027EF32 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B370BA912B74A8010027EF32 /* Pretendard-SemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,15 +86,12 @@
 		B32BB9122B5B586B000350DE /* PicPick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicPick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32BB9152B5B586B000350DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32BB9172B5B586B000350DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B32BB9192B5B586B000350DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B32BB9192B5B586B000350DE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B32BB91E2B5B586C000350DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32BB9212B5B586C000350DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32BB9232B5B586C000350DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B32BB92E2B5B5C3B000350DE /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
-		B32BB92F2B5B5C3B000350DE /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
-		B32BB9302B5B5C3B000350DE /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		B32BB9342B5B5C54000350DE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		B32BB9362B5B5C83000350DE /* PicPickFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPickFont.swift; sourceTree = "<group>"; };
+		B32BB9362B5B5C83000350DE /* PPFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPFont.swift; sourceTree = "<group>"; };
 		B32BB9382B5B5CE1000350DE /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		B32BB9552B5B5F1A000350DE /* PicPick-Resource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PicPick-Resource.xcodeproj"; path = "../PicPick-Resource/PicPick-Resource.xcodeproj"; sourceTree = "<group>"; };
 		B32BB9782B5B6374000350DE /* PicPick-Util.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PicPick-Util.xcodeproj"; path = "../PicPick-Util/PicPick-Util.xcodeproj"; sourceTree = "<group>"; };
@@ -101,6 +108,17 @@
 		B370BA2D2B6A6F100027EF32 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B370BA592B724EC40027EF32 /* EditImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageViewController.swift; sourceTree = "<group>"; };
 		B370BA622B73AFE50027EF32 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
+		B370BA652B73FBB00027EF32 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		B370BA672B73FBFA0027EF32 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B370BA692B7420230027EF32 /* CurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurationViewController.swift; sourceTree = "<group>"; };
+		B370BA6B2B7422C90027EF32 /* PhotoCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		B370BA6D2B7423410027EF32 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		B370BA752B7424A20027EF32 /* ImageContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainerCollectionViewCell.swift; sourceTree = "<group>"; };
+		B370BA772B7424DE0027EF32 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B370BA792B749BE40027EF32 /* PPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPNavigationController.swift; sourceTree = "<group>"; };
+		B370BA8F2B74A8010027EF32 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		B370BA902B74A8010027EF32 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		B370BA912B74A8010027EF32 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +131,8 @@
 				B32BB9872B5B6C3D000350DE /* PicPick_Util.framework in Frameworks */,
 				B370BA5D2B7250750027EF32 /* CropViewController in Frameworks */,
 				B32BB9862B5B68CE000350DE /* SnapKit-Dynamic in Frameworks */,
+				B370BA742B7423C40027EF32 /* Pageboy in Frameworks */,
+				B370BA712B74238E0027EF32 /* Tabman in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,9 +163,9 @@
 			children = (
 				B32BB92B2B5B5C20000350DE /* Global */,
 				B370BA2C2B6A6E8C0027EF32 /* LoginView */,
+				B370BA642B73FB500027EF32 /* HomeView */,
 				B32BB9152B5B586B000350DE /* AppDelegate.swift */,
 				B32BB9172B5B586B000350DE /* SceneDelegate.swift */,
-				B32BB9192B5B586B000350DE /* ViewController.swift */,
 				B3650CB92B62E66600E95272 /* QRViewController.swift */,
 				B370BA592B724EC40027EF32 /* EditImageViewController.swift */,
 				B32BB91E2B5B586C000350DE /* Assets.xcassets */,
@@ -154,6 +174,11 @@
 				B32BB9382B5B5CE1000350DE /* InfoPlist.xcstrings */,
 				B32BB97E2B5B64AE000350DE /* Localizable.xcstrings */,
 				B3650CBB2B62E70600E95272 /* QRReaderView.swift */,
+				B370BA692B7420230027EF32 /* CurationViewController.swift */,
+				B370BA6B2B7422C90027EF32 /* PhotoCardCollectionViewCell.swift */,
+				B370BA6D2B7423410027EF32 /* AddPhotoViewController.swift */,
+				B370BA752B7424A20027EF32 /* ImageContainerCollectionViewCell.swift */,
+				B370BA772B7424DE0027EF32 /* SearchViewController.swift */,
 			);
 			path = PicPick;
 			sourceTree = "<group>";
@@ -172,6 +197,7 @@
 				B32BB9892B5B7A6B000350DE /* Buttons */,
 				B32BB92D2B5B5C2E000350DE /* Fonts */,
 				B370BA202B66CA400027EF32 /* PPTextField.swift */,
+				B370BA792B749BE40027EF32 /* PPNavigationController.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -179,11 +205,11 @@
 		B32BB92D2B5B5C2E000350DE /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B370BA902B74A8010027EF32 /* Pretendard-Bold.otf */,
+				B370BA8F2B74A8010027EF32 /* Pretendard-Medium.otf */,
+				B370BA912B74A8010027EF32 /* Pretendard-SemiBold.otf */,
 				B32BB9342B5B5C54000350DE /* UIFont+Extension.swift */,
-				B32BB9362B5B5C83000350DE /* PicPickFont.swift */,
-				B32BB92E2B5B5C3B000350DE /* Pretendard-Bold.otf */,
-				B32BB92F2B5B5C3B000350DE /* Pretendard-Medium.otf */,
-				B32BB9302B5B5C3B000350DE /* Pretendard-SemiBold.otf */,
+				B32BB9362B5B5C83000350DE /* PPFont.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -233,6 +259,16 @@
 			path = LoginView;
 			sourceTree = "<group>";
 		};
+		B370BA642B73FB500027EF32 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				B32BB9192B5B586B000350DE /* HomeViewController.swift */,
+				B370BA652B73FBB00027EF32 /* CollectionViewCell.swift */,
+				B370BA672B73FBFA0027EF32 /* TableViewCell.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,6 +290,8 @@
 				B32BB9832B5B68CE000350DE /* SnapKit */,
 				B32BB9852B5B68CE000350DE /* SnapKit-Dynamic */,
 				B370BA5C2B7250750027EF32 /* CropViewController */,
+				B370BA702B74238E0027EF32 /* Tabman */,
+				B370BA732B7423C40027EF32 /* Pageboy */,
 			);
 			productName = PicPick;
 			productReference = B32BB9122B5B586B000350DE /* PicPick.app */;
@@ -287,6 +325,8 @@
 			packageReferences = (
 				B32BB9822B5B68CE000350DE /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B370BA5B2B7250750027EF32 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+				B370BA6F2B74238E0027EF32 /* XCRemoteSwiftPackageReference "Tabman" */,
+				B370BA722B7423C40027EF32 /* XCRemoteSwiftPackageReference "Pageboy" */,
 			);
 			productRefGroup = B32BB9132B5B586B000350DE /* Products */;
 			projectDirPath = "";
@@ -330,12 +370,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32BB9392B5B5CE1000350DE /* InfoPlist.xcstrings in Resources */,
+				B370BA932B74A8010027EF32 /* Pretendard-Bold.otf in Resources */,
+				B370BA942B74A8010027EF32 /* Pretendard-SemiBold.otf in Resources */,
+				B370BA922B74A8010027EF32 /* Pretendard-Medium.otf in Resources */,
 				B32BB9222B5B586C000350DE /* LaunchScreen.storyboard in Resources */,
-				B32BB9312B5B5C3B000350DE /* Pretendard-Bold.otf in Resources */,
-				B32BB9332B5B5C3B000350DE /* Pretendard-SemiBold.otf in Resources */,
 				B32BB91F2B5B586C000350DE /* Assets.xcassets in Resources */,
 				B32BB97F2B5B64AE000350DE /* Localizable.xcstrings in Resources */,
-				B32BB9322B5B5C3B000350DE /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,21 +388,29 @@
 			files = (
 				B370BA5A2B724EC40027EF32 /* EditImageViewController.swift in Sources */,
 				B3650CBE2B6372DB00E95272 /* WelcomeViewController.swift in Sources */,
-				B32BB91A2B5B586B000350DE /* ViewController.swift in Sources */,
-				B32BB9372B5B5C83000350DE /* PicPickFont.swift in Sources */,
+				B370BA662B73FBB00027EF32 /* CollectionViewCell.swift in Sources */,
+				B32BB91A2B5B586B000350DE /* HomeViewController.swift in Sources */,
+				B370BA682B73FBFA0027EF32 /* TableViewCell.swift in Sources */,
+				B32BB9372B5B5C83000350DE /* PPFont.swift in Sources */,
 				B32BB9162B5B586B000350DE /* AppDelegate.swift in Sources */,
 				B370BA632B73AFE50027EF32 /* NewProfileViewController.swift in Sources */,
+				B370BA7A2B749BE40027EF32 /* PPNavigationController.swift in Sources */,
 				B370BA212B66CA400027EF32 /* PPTextField.swift in Sources */,
 				B370BA272B68FC9F0027EF32 /* PPButton.swift in Sources */,
+				B370BA762B7424A20027EF32 /* ImageContainerCollectionViewCell.swift in Sources */,
 				B3650CBA2B62E66600E95272 /* QRViewController.swift in Sources */,
 				B32BB9352B5B5C54000350DE /* UIFont+Extension.swift in Sources */,
 				B370BA232B6772C90027EF32 /* PPBlackButton.swift in Sources */,
 				B370BA2E2B6A6F100027EF32 /* SignUpViewController.swift in Sources */,
+				B370BA6C2B7422C90027EF32 /* PhotoCardCollectionViewCell.swift in Sources */,
 				B32BB9182B5B586B000350DE /* SceneDelegate.swift in Sources */,
 				B3650CBC2B62E70600E95272 /* QRReaderView.swift in Sources */,
+				B370BA782B7424DE0027EF32 /* SearchViewController.swift in Sources */,
+				B370BA6E2B7423410027EF32 /* AddPhotoViewController.swift in Sources */,
 				B370BA2B2B6900060027EF32 /* PPLineButton.swift in Sources */,
 				B370BA292B68FEC20027EF32 /* PPWhiteButton.swift in Sources */,
 				B3650CC72B64B3A800E95272 /* LoginViewController.swift in Sources */,
+				B370BA6A2B7420230027EF32 /* CurationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +647,22 @@
 				minimumVersion = 2.6.1;
 			};
 		};
+		B370BA6F2B74238E0027EF32 /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+		B370BA722B7423C40027EF32 /* XCRemoteSwiftPackageReference "Pageboy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Pageboy";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -616,6 +680,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B370BA5B2B7250750027EF32 /* XCRemoteSwiftPackageReference "TOCropViewController" */;
 			productName = CropViewController;
+		};
+		B370BA702B74238E0027EF32 /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B370BA6F2B74238E0027EF32 /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
+		};
+		B370BA732B7423C40027EF32 /* Pageboy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B370BA722B7423C40027EF32 /* XCRemoteSwiftPackageReference "Pageboy" */;
+			productName = Pageboy;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

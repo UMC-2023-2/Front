@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     
     lazy var idLabel: UILabel = {
         let label = UILabel()
-        label.font = PicPickFont.titleLarge700.font
+        label.font = PPFont.titleLarge700.font
         label.textColor = R.Color.gray900
         label.text = NSLocalizedString("Login ID Label", comment: "Login page ID Lable")
         return label
@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
     
     lazy var pwLabel: UILabel = {
         let label = UILabel()
-        label.font = PicPickFont.titleLarge700.font
+        label.font = PPFont.titleLarge700.font
         label.textColor = R.Color.gray900
         label.text = NSLocalizedString("Login Password Label", comment: "Login page Password Lable")
         return label
@@ -64,7 +64,8 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         title = NSLocalizedString("Login Title", comment: "Login page navigationvar title")
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PicPickFont.titleLarge700.font]
+        removeBackBtnTitle()
+        
         view.backgroundColor = .white
         
         view.addSubview(idLabel)
@@ -121,7 +122,7 @@ class LoginViewController: UIViewController {
     
     @objc
     func loginBtnDidTap(_ sender: UIButton) {
-        let mainVC = UINavigationController(rootViewController: ViewController())
+        let mainVC = PPNavigationController(rootViewController: HomeViewController())
         mainVC.modalPresentationStyle = .fullScreen
         present(mainVC, animated: true)
     }
