@@ -22,6 +22,16 @@
 		B32BB9862B5B68CE000350DE /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B32BB9852B5B68CE000350DE /* SnapKit-Dynamic */; };
 		B32BB9872B5B6C3D000350DE /* PicPick_Util.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB97D2B5B6374000350DE /* PicPick_Util.framework */; platformFilter = ios; };
 		B32BB9882B5B6C3D000350DE /* PicPick_Util.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32BB97D2B5B6374000350DE /* PicPick_Util.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B32FBF542B7782DC00710A55 /* PPEditProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32FBF532B7782DC00710A55 /* PPEditProfileImageView.swift */; };
+		B32FBF562B7B32FD00710A55 /* NewMemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32FBF552B7B32FD00710A55 /* NewMemoriesViewController.swift */; };
+		B32FBF582B7B386A00710A55 /* NewMemoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32FBF572B7B386A00710A55 /* NewMemoriesCollectionViewCell.swift */; };
+		B32FBF5A2B7B97E800710A55 /* PPTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32FBF592B7B97E800710A55 /* PPTextView.swift */; };
+		B32FBF5F2B806ABF00710A55 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32FBF5E2B806ABF00710A55 /* APIConstants.swift */; };
+		B32FBF622B806C1000710A55 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B32FBF612B806C1000710A55 /* Alamofire */; };
+		B32FBF652B806E5F00710A55 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32FBF642B806E5F00710A55 /* LoginModel.swift */; };
+		B32FBF682B80760100710A55 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32FBF672B80760100710A55 /* UserService.swift */; };
+		B32FBF6A2B80765E00710A55 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32FBF692B80765E00710A55 /* NetworkResult.swift */; };
+		B32FBF6C2B80CF7E00710A55 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32FBF6B2B80CF7E00710A55 /* KeyChain.swift */; };
 		B3650CBA2B62E66600E95272 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3650CB92B62E66600E95272 /* QRViewController.swift */; };
 		B3650CBC2B62E70600E95272 /* QRReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3650CBB2B62E70600E95272 /* QRReaderView.swift */; };
 		B3650CBE2B6372DB00E95272 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3650CBD2B6372DB00E95272 /* WelcomeViewController.swift */; };
@@ -96,6 +106,15 @@
 		B32BB9552B5B5F1A000350DE /* PicPick-Resource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PicPick-Resource.xcodeproj"; path = "../PicPick-Resource/PicPick-Resource.xcodeproj"; sourceTree = "<group>"; };
 		B32BB9782B5B6374000350DE /* PicPick-Util.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PicPick-Util.xcodeproj"; path = "../PicPick-Util/PicPick-Util.xcodeproj"; sourceTree = "<group>"; };
 		B32BB97E2B5B64AE000350DE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B32FBF532B7782DC00710A55 /* PPEditProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPEditProfileImageView.swift; sourceTree = "<group>"; };
+		B32FBF552B7B32FD00710A55 /* NewMemoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoriesViewController.swift; sourceTree = "<group>"; };
+		B32FBF572B7B386A00710A55 /* NewMemoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		B32FBF592B7B97E800710A55 /* PPTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPTextView.swift; sourceTree = "<group>"; };
+		B32FBF5E2B806ABF00710A55 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		B32FBF642B806E5F00710A55 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B32FBF672B80760100710A55 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		B32FBF692B80765E00710A55 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		B32FBF6B2B80CF7E00710A55 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		B3650CB92B62E66600E95272 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		B3650CBB2B62E70600E95272 /* QRReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderView.swift; sourceTree = "<group>"; };
 		B3650CBD2B6372DB00E95272 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32BB95C2B5B5F34000350DE /* PicPick_Resource.framework in Frameworks */,
+				B32FBF622B806C1000710A55 /* Alamofire in Frameworks */,
 				B32BB9842B5B68CE000350DE /* SnapKit in Frameworks */,
 				B32BB9872B5B6C3D000350DE /* PicPick_Util.framework in Frameworks */,
 				B370BA5D2B7250750027EF32 /* CropViewController in Frameworks */,
@@ -161,13 +181,15 @@
 		B32BB9142B5B586B000350DE /* PicPick */ = {
 			isa = PBXGroup;
 			children = (
-				B32BB92B2B5B5C20000350DE /* Global */,
-				B370BA2C2B6A6E8C0027EF32 /* LoginView */,
-				B370BA642B73FB500027EF32 /* HomeView */,
 				B32BB9152B5B586B000350DE /* AppDelegate.swift */,
 				B32BB9172B5B586B000350DE /* SceneDelegate.swift */,
+				B32BB92B2B5B5C20000350DE /* Global */,
+				B370BA2C2B6A6E8C0027EF32 /* Login */,
+				B370BA642B73FB500027EF32 /* HomeView */,
 				B3650CB92B62E66600E95272 /* QRViewController.swift */,
 				B370BA592B724EC40027EF32 /* EditImageViewController.swift */,
+				B32FBF552B7B32FD00710A55 /* NewMemoriesViewController.swift */,
+				B32FBF572B7B386A00710A55 /* NewMemoriesCollectionViewCell.swift */,
 				B32BB91E2B5B586C000350DE /* Assets.xcassets */,
 				B32BB9202B5B586C000350DE /* LaunchScreen.storyboard */,
 				B32BB9232B5B586C000350DE /* Info.plist */,
@@ -186,7 +208,9 @@
 		B32BB92B2B5B5C20000350DE /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				B32FBF5D2B806AAA00710A55 /* Network */,
 				B32BB92C2B5B5C28000350DE /* DesignSystem */,
+				B32FBF6B2B80CF7E00710A55 /* KeyChain.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -196,8 +220,10 @@
 			children = (
 				B32BB9892B5B7A6B000350DE /* Buttons */,
 				B32BB92D2B5B5C2E000350DE /* Fonts */,
+				B32FBF592B7B97E800710A55 /* PPTextView.swift */,
 				B370BA202B66CA400027EF32 /* PPTextField.swift */,
 				B370BA792B749BE40027EF32 /* PPNavigationController.swift */,
+				B32FBF532B7782DC00710A55 /* PPEditProfileImageView.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -248,15 +274,42 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		B370BA2C2B6A6E8C0027EF32 /* LoginView */ = {
+		B32FBF5D2B806AAA00710A55 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B32FBF662B8075CD00710A55 /* Service */,
+				B32FBF5E2B806ABF00710A55 /* APIConstants.swift */,
+				B32FBF692B80765E00710A55 /* NetworkResult.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B32FBF632B806E4B00710A55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B32FBF642B806E5F00710A55 /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B32FBF662B8075CD00710A55 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B32FBF672B80760100710A55 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B370BA2C2B6A6E8C0027EF32 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B32FBF632B806E4B00710A55 /* Model */,
 				B3650CBD2B6372DB00E95272 /* WelcomeViewController.swift */,
 				B3650CC62B64B3A800E95272 /* LoginViewController.swift */,
 				B370BA2D2B6A6F100027EF32 /* SignUpViewController.swift */,
 				B370BA622B73AFE50027EF32 /* NewProfileViewController.swift */,
 			);
-			path = LoginView;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B370BA642B73FB500027EF32 /* HomeView */ = {
@@ -292,6 +345,7 @@
 				B370BA5C2B7250750027EF32 /* CropViewController */,
 				B370BA702B74238E0027EF32 /* Tabman */,
 				B370BA732B7423C40027EF32 /* Pageboy */,
+				B32FBF612B806C1000710A55 /* Alamofire */,
 			);
 			productName = PicPick;
 			productReference = B32BB9122B5B586B000350DE /* PicPick.app */;
@@ -327,6 +381,7 @@
 				B370BA5B2B7250750027EF32 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
 				B370BA6F2B74238E0027EF32 /* XCRemoteSwiftPackageReference "Tabman" */,
 				B370BA722B7423C40027EF32 /* XCRemoteSwiftPackageReference "Pageboy" */,
+				B32FBF602B806C1000710A55 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = B32BB9132B5B586B000350DE /* Products */;
 			projectDirPath = "";
@@ -386,28 +441,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B32FBF5A2B7B97E800710A55 /* PPTextView.swift in Sources */,
 				B370BA5A2B724EC40027EF32 /* EditImageViewController.swift in Sources */,
+				B32FBF562B7B32FD00710A55 /* NewMemoriesViewController.swift in Sources */,
 				B3650CBE2B6372DB00E95272 /* WelcomeViewController.swift in Sources */,
+				B32FBF542B7782DC00710A55 /* PPEditProfileImageView.swift in Sources */,
 				B370BA662B73FBB00027EF32 /* CollectionViewCell.swift in Sources */,
 				B32BB91A2B5B586B000350DE /* HomeViewController.swift in Sources */,
+				B32FBF6C2B80CF7E00710A55 /* KeyChain.swift in Sources */,
 				B370BA682B73FBFA0027EF32 /* TableViewCell.swift in Sources */,
 				B32BB9372B5B5C83000350DE /* PPFont.swift in Sources */,
 				B32BB9162B5B586B000350DE /* AppDelegate.swift in Sources */,
 				B370BA632B73AFE50027EF32 /* NewProfileViewController.swift in Sources */,
 				B370BA7A2B749BE40027EF32 /* PPNavigationController.swift in Sources */,
+				B32FBF5F2B806ABF00710A55 /* APIConstants.swift in Sources */,
+				B32FBF652B806E5F00710A55 /* LoginModel.swift in Sources */,
 				B370BA212B66CA400027EF32 /* PPTextField.swift in Sources */,
 				B370BA272B68FC9F0027EF32 /* PPButton.swift in Sources */,
 				B370BA762B7424A20027EF32 /* ImageContainerCollectionViewCell.swift in Sources */,
 				B3650CBA2B62E66600E95272 /* QRViewController.swift in Sources */,
 				B32BB9352B5B5C54000350DE /* UIFont+Extension.swift in Sources */,
+				B32FBF582B7B386A00710A55 /* NewMemoriesCollectionViewCell.swift in Sources */,
 				B370BA232B6772C90027EF32 /* PPBlackButton.swift in Sources */,
 				B370BA2E2B6A6F100027EF32 /* SignUpViewController.swift in Sources */,
 				B370BA6C2B7422C90027EF32 /* PhotoCardCollectionViewCell.swift in Sources */,
 				B32BB9182B5B586B000350DE /* SceneDelegate.swift in Sources */,
+				B32FBF6A2B80765E00710A55 /* NetworkResult.swift in Sources */,
 				B3650CBC2B62E70600E95272 /* QRReaderView.swift in Sources */,
 				B370BA782B7424DE0027EF32 /* SearchViewController.swift in Sources */,
 				B370BA6E2B7423410027EF32 /* AddPhotoViewController.swift in Sources */,
 				B370BA2B2B6900060027EF32 /* PPLineButton.swift in Sources */,
+				B32FBF682B80760100710A55 /* UserService.swift in Sources */,
 				B370BA292B68FEC20027EF32 /* PPWhiteButton.swift in Sources */,
 				B3650CC72B64B3A800E95272 /* LoginViewController.swift in Sources */,
 				B370BA6A2B7420230027EF32 /* CurationViewController.swift in Sources */,
@@ -639,6 +703,14 @@
 				minimumVersion = 5.7.0;
 			};
 		};
+		B32FBF602B806C1000710A55 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 		B370BA5B2B7250750027EF32 /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TimOliver/TOCropViewController.git";
@@ -675,6 +747,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B32BB9822B5B68CE000350DE /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		B32FBF612B806C1000710A55 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B32FBF602B806C1000710A55 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		B370BA5C2B7250750027EF32 /* CropViewController */ = {
 			isa = XCSwiftPackageProductDependency;

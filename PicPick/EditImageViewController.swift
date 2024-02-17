@@ -73,6 +73,8 @@ class EditImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        removeBackBtnTitle()
 
         title = NSLocalizedString("Edit Image Title", comment: "Edit Image page navigationvar title")
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PPFont.titleLarge700.font]
@@ -156,9 +158,7 @@ class EditImageViewController: UIViewController {
     
     @objc
     func saveImageInPhotos() {
-        croppedImages.forEach { image in
-            UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
-        }
+        self.navigationController?.pushViewController(NewMemoriesViewController(), animated: true)
     }
 }
 

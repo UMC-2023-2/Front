@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import PicPick_Resource
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    var isLoggedIn: Bool = UserDefaults.standard.bool(forKey: R.String.UserDefaultKey.isLoggedIn)
+    var acToken: String?
+    var rfToken: String?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -19,7 +23,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        let navigationViewController = PPNavigationController(rootViewController: WelcomeViewController())
+        let mainView: UIViewController
+        
+        if isLoggedIn {
+            mainView = HomeViewController()
+        } else {
+            mainView = WelcomeViewController()
+        }
+        
+        let navigationViewController = PPNavigationController(rootViewController: mainView)
         
         window.rootViewController = navigationViewController
         window.makeKeyAndVisible()

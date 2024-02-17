@@ -6,14 +6,25 @@
 //
 
 import UIKit
+import PicPick_Resource
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var acToken: String?
+    var reToken: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        acToken = KeyChain.read(key: R.String.KeyChainKey.accessToken)
+        
+        if acToken != nil {
+            UserDefaults.standard.set(true, forKey: R.String.UserDefaultKey.isLoggedIn)
+        } else {
+            UserDefaults.standard.set(false, forKey: R.String.UserDefaultKey.isLoggedIn)
+        }
+        
         return true
     }
 

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+
+import SnapKit
 import PicPick_Resource
 
 class PPTextField: UITextField {
@@ -36,18 +38,19 @@ class PPTextField: UITextField {
             .font: PPFont.bodyLarge500.font
         ]
         defaultTextAttributes = attributes
+        rightView?.frame = rightViewRect(forBounds: bounds)
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-            return bounds.insetBy(dx: 16, dy: 13)
+        return bounds.insetBy(dx: 24, dy: 13).offsetBy(dx: -8, dy: 0)
     }
 
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.insetBy(dx: 16, dy: 13)
+        return bounds.insetBy(dx: 24, dy: 13).offsetBy(dx: -8, dy: 0)
     }
 
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.insetBy(dx: 16, dy: 13)
+        return bounds.insetBy(dx: 24, dy: 13).offsetBy(dx: -8, dy: 0)
     }
     
     convenience init(placeholder: String) {
@@ -74,8 +77,6 @@ class PPTextField: UITextField {
     func enablePasswordToggle(){
         let button = UIButton(type: .custom)
         setPasswordToggleImage(button)
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -14, bottom: 0, right: 0)
-        button.frame = CGRect(x: CGFloat(self.frame.size.width - 24), y: CGFloat(5), width: CGFloat(24), height: CGFloat(24))
         button.addTarget(self, action: #selector(self.togglePasswordView), for: .touchUpInside)
         button.tintColor = R.Color.gray600
         self.rightView = button
@@ -84,5 +85,16 @@ class PPTextField: UITextField {
     @IBAction func togglePasswordView(_ sender: Any) {
         self.isSecureTextEntry = !self.isSecureTextEntry
         setPasswordToggleImage(sender as! UIButton)
+    }
+    
+    override open func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        var rect = textRect(forBounds: bounds)
+        rect.size.width = 34
+        rect.origin.x = bounds.size.width - rect.size.width
+        return rect
+    }
+    
+    override open func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
+        return rightViewRect(forBounds: bounds)
     }
 }

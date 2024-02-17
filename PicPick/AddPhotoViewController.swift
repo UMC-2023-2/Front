@@ -8,16 +8,11 @@
 import UIKit
 
 import PicPick_Resource
+import PicPick_Util
 import Tabman
 import Pageboy
 
 class AddPhotoViewController: UIViewController {
-
-    let backView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        return view
-    }()
     
     let contentView: UIView = {
         let view = UIView()
@@ -197,22 +192,18 @@ class AddPhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backbutton = UIBarButtonItem(image: R.Image.icoLineArrowLeft24.withRenderingMode(.alwaysTemplate), style: .done, target: self, action: #selector(back))
-        backbutton.tintColor = R.Color.gray900
-        self.navigationItem.leftBarButtonItem = backbutton
+        removeBackBtnTitle()
+        
+        view.backgroundColor = R.Color.systemWhite
+        
         let searchBar = UISearchBar()
         searchBar.placeholder = "추억을 찾아드려요"
+        navigationController?.navigationBar.tintColor = R.Color.gray900
         
         self.navigationItem.titleView = searchBar
         
         //
-        self.view.addSubview(self.backView)
         self.view.addSubview(self.underView)
-        
-        backView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
         
         self.view.addSubview(self.contentView)
        

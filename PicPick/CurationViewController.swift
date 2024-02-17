@@ -105,7 +105,6 @@ class CurationViewController: UIViewController, UITextFieldDelegate {
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 15
-        //layout.collectionView?.scrollToItem(at: <#T##IndexPath#>, at: <#T##UICollectionView.ScrollPosition#>, animated: <#T##Bool#>)
         return layout
     }()
     
@@ -142,7 +141,8 @@ class CurationViewController: UIViewController, UITextFieldDelegate {
         
         // 이미지뷰 추가
         let imageView = UIImageView()
-        imageView.image = R.Image.icoImg46
+        imageView.image = R.Image.icoImg46.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = R.Color.gray500
         ncView.addSubview(imageView)
         imageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -281,15 +281,20 @@ class CurationViewController: UIViewController, UITextFieldDelegate {
         navigationController?.pushViewController(addPhotoViewController, animated: true)
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.tintColor = R.Color.systemWhite
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
+        removeBackBtnTitle()
         let homebutton = UIBarButtonItem(image:R.Image.icoHome24.withRenderingMode(.alwaysTemplate) , style: .done, target: self, action: #selector(back))
-        homebutton.tintColor = R.Color.gray300
         self.navigationItem.rightBarButtonItem = homebutton
+        
+        navigationController?.navigationBar.tintColor = R.Color.systemWhite
         
         
         

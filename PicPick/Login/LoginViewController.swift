@@ -13,24 +13,28 @@ import PicPick_Util
 
 class LoginViewController: UIViewController {
     
+    // MARK: - Parameters
     var id = String()
     var password = String()
     
+    // MARK: - UIs
     lazy var idLabel: UILabel = {
         let label = UILabel()
         label.font = PPFont.titleLarge700.font
         label.textColor = R.Color.gray900
-        label.text = NSLocalizedString("Login ID Label", comment: "Login page ID Lable")
+        label.text = NSLocalizedString("Login Email Label", comment: "Login page Email Lable")
         return label
     } ()
     
     lazy var idTextField: PPTextField = {
-        let textField = PPTextField(placeholder: NSLocalizedString("Login ID Placeholder", comment: "Login page ID textfield placeholder"))
+        let textField = PPTextField(placeholder: NSLocalizedString("Login Email Placeholder", comment: "Login page Email textfield placeholder"))
         textField.becomeFirstResponder()
         textField.textContentType = .username
         textField.keyboardType = .asciiCapable
         textField.clearButtonMode = .always
         textField.addTarget(self, action: #selector(idTextFieldEditingChange(_:)), for: .editingChanged)
+        textField.returnKeyType = .next
+        textField.delegate = self
         return textField
     } ()
     
@@ -48,6 +52,8 @@ class LoginViewController: UIViewController {
         textField.textContentType = .password
         textField.addTarget(self, action: #selector(pwTextFieldEditingChange(_:)), for: .editingChanged)
         textField.enablePasswordToggle()
+        textField.returnKeyType = .done
+        textField.delegate = self
         return textField
     } ()
     
@@ -59,6 +65,7 @@ class LoginViewController: UIViewController {
         return button
     } ()
 
+    // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -102,10 +109,11 @@ class LoginViewController: UIViewController {
         loginBtn.snp.makeConstraints {
             $0.left.equalTo(view.safeAreaLayoutGuide).offset(16)
             $0.right.equalTo(view.safeAreaLayoutGuide).offset(-16)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-10)
+            $0.bottom.equalTo(view.keyboardLayoutGuide.snp.top).offset(-10)
         }
     }
     
+    // MARK: - Functions
     @objc
     func idTextFieldEditingChange(_ sender: UITextField) {
         let text = sender.text ?? ""
@@ -122,9 +130,53 @@ class LoginViewController: UIViewController {
     
     @objc
     func loginBtnDidTap(_ sender: UIButton) {
-        let mainVC = PPNavigationController(rootViewController: HomeViewController())
-        mainVC.modalPresentationStyle = .fullScreen
-        present(mainVC, animated: true)
+        login()
+//        let mainVC = PPNavigationController(rootViewController: HomeViewController())
+//        mainVC.modalPresentationStyle = .fullScreen
+//        present(mainVC, animated: true)
     }
     
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case idTextField:
+            pwTextField.becomeFirstResponder()
+        case pwTextField:
+            if loginBtn.isEnabled {
+                loginBtnDidTap(loginBtn)
+            }
+        default:
+            break
+        }
+        return true
+    }
+}
+
+extension LoginViewController {
+    func login() {
+        UserService.shared.login(email: id, password: password) { response in
+            switch response {
+            case .success(let data):
+                if let userData = data as? LoginResponse {
+                    KeyChain.create(key: R.String.KeyChainKey.accessToken, token: userData.result!.accessToken)
+                    KeyChain.create(key: R.String.KeyChainKey.refreshToken, token: userData.result!.refreshToken)
+                    UserDefaults.standard.set(true, forKey: R.String.UserDefaultKey.isLoggedIn)
+                    
+                    let navigationViewController = PPNavigationController(rootViewController: HomeViewController())
+                    navigationViewController.modalPresentationStyle = .fullScreen
+                    self.present(navigationViewController, animated: true)
+                }
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
 }

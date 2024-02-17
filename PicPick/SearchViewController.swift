@@ -8,6 +8,7 @@
 import UIKit
 
 import PicPick_Resource
+import PicPick_Util
 import SnapKit
 
 class SearchViewController: UIViewController {
@@ -181,7 +182,10 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(self.backView)
+        view.backgroundColor = R.Color.systemWhite
+
+        removeBackBtnTitle()
+        
         self.view.addSubview(self.contentView)
         
         let searchBar = UISearchBar()
@@ -189,14 +193,6 @@ class SearchViewController: UIViewController {
         
         self.navigationItem.titleView = searchBar
         
-
-        
-        
-        //setUI
-        backView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    
         contentView.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(22)
             make.bottom.equalToSuperview()

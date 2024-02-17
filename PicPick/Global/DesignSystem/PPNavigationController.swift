@@ -18,7 +18,10 @@ class PPNavigationController: UINavigationController {
         navigationBar.backIndicatorImage = R.Image.icoNavLineArrowLeft24
         navigationBar.backIndicatorTransitionMaskImage = R.Image.icoNavLineArrowLeft24
         navigationBar.tintColor = R.Color.gray900
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.font : PPFont.titleLarge700.font]
+        navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font : PPFont.titleLarge700.font,
+            NSAttributedString.Key.foregroundColor : R.Color.gray900
+        ]
     }
     
 
