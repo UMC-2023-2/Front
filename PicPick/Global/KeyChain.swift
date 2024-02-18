@@ -11,10 +11,9 @@ import Security
 class KeyChain {
     class func create(key: String, token: String) {
         let query: NSDictionary = [
-        kSecClass: kSecClassGenericPassword,
-        kSecAttrAccount: key,
-        kSecValueData: token.data(using: .utf8, allowLossyConversion: false) as Any
-            
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrAccount: key,
+            kSecValueData: token.data(using: .utf8, allowLossyConversion: false) as Any
         ]
         SecItemDelete(query)
         

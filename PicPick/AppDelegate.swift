@@ -16,7 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        if !UserDefaults.standard.bool(forKey: R.String.UserDefaultKey.isLoggedIn) {
+            let query: NSDictionary = [
+                kSecClass: kSecClassGenericPassword,
+                kSecAttrAccount: R.String.KeyChainKey.accessToken
+            ]
+            SecItemDelete(query)
+        }
         acToken = KeyChain.read(key: R.String.KeyChainKey.accessToken)
         
         if acToken != nil {

@@ -61,9 +61,8 @@ class UserService {
     
     private func isVaildData(data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(LoginResponse.self, from: data)
-        else { return .pathErr }
+        if let decodedData = try? decoder.decode(LoginResponse.self, from: data) { return .success(decodedData as Any) }
         
-        return .success(decodedData as Any)
+        return .pathErr
     }
 }
