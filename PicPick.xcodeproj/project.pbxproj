@@ -58,6 +58,7 @@
 		B370BA922B74A8010027EF32 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B370BA8F2B74A8010027EF32 /* Pretendard-Medium.otf */; };
 		B370BA932B74A8010027EF32 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B370BA902B74A8010027EF32 /* Pretendard-Bold.otf */; };
 		B370BA942B74A8010027EF32 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B370BA912B74A8010027EF32 /* Pretendard-SemiBold.otf */; };
+		B373F84E2B81C89D0059C9D0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B373F84D2B81C89D0059C9D0 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		B370BA8F2B74A8010027EF32 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		B370BA902B74A8010027EF32 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		B370BA912B74A8010027EF32 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		B373F84D2B81C89D0059C9D0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		B32BB9092B5B586B000350DE = {
 			isa = PBXGroup;
 			children = (
+				B373F84D2B81C89D0059C9D0 /* .gitignore */,
 				B32BB9782B5B6374000350DE /* PicPick-Util.xcodeproj */,
 				B32BB9552B5B5F1A000350DE /* PicPick-Resource.xcodeproj */,
 				B32BB9142B5B586B000350DE /* PicPick */,
@@ -424,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B373F84E2B81C89D0059C9D0 /* .gitignore in Resources */,
 				B32BB9392B5B5CE1000350DE /* InfoPlist.xcstrings in Resources */,
 				B370BA932B74A8010027EF32 /* Pretendard-Bold.otf in Resources */,
 				B370BA942B74A8010027EF32 /* Pretendard-SemiBold.otf in Resources */,
