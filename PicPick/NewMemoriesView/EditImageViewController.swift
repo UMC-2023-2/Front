@@ -71,6 +71,15 @@ class EditImageViewController: UIViewController {
         return button
     } ()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.tintColor = R.Color.gray900
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font : PPFont.titleLarge700.font,
+            NSAttributedString.Key.foregroundColor : R.Color.gray900
+        ]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -158,7 +167,11 @@ class EditImageViewController: UIViewController {
     
     @objc
     func saveImageInPhotos() {
-        self.navigationController?.pushViewController(NewMemoriesViewController(), animated: true)
+        let newMemoriesVC = NewMemoriesViewController()
+        
+        newMemoriesVC.images = croppedImages
+        
+        self.navigationController?.pushViewController(newMemoriesVC, animated: true)
     }
 }
 

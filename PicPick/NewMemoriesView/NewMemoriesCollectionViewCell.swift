@@ -15,6 +15,8 @@ class NewMemoriesCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "NewMemoriesCollectionViewCell"
     
+    var tags:[String] = []
+    
     lazy var memoriesLabel = {
         let label = UILabel()
         label.text = NSLocalizedString("New Memories Write Memory Label", comment: "New Memories Write Memory Label")
@@ -37,6 +39,19 @@ class NewMemoriesCollectionViewCell: UICollectionViewCell {
         return label
     } ()
     
+    lazy var keywords = {
+        let view = DynamicCollectionView(frame: .zero, collectionViewLayout: CollectionViewLeftAlignFlowLayout.init())
+        
+        if let flowLayout = view.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+        view.backgroundColor = .clear
+        view.delegate = self
+        view.dataSource = self
+        view.register(LabelsCollectionViewCell.self, forCellWithReuseIdentifier: LabelsCollectionViewCell.identifier)
+        return view
+    } ()
+    
     lazy var dateLabel = {
         let label = UILabel()
         label.text = NSLocalizedString("New Memories Date Label", comment: "New Memories Date Label")
@@ -57,6 +72,7 @@ class NewMemoriesCollectionViewCell: UICollectionViewCell {
         dimd.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        image.clipsToBounds = true
         
         return image
     } ()
@@ -68,6 +84,7 @@ class NewMemoriesCollectionViewCell: UICollectionViewCell {
         addSubview(memoriesLabel)
         addSubview(memoriesTextView)
         addSubview(keywordLabel)
+        addSubview(keywords)
         addSubview(dateLabel)
         
         backgroudImage.snp.makeConstraints {
@@ -90,8 +107,13 @@ class NewMemoriesCollectionViewCell: UICollectionViewCell {
             $0.leading.equalTo(safeAreaLayoutGuide).offset(16)
         }
         
+        keywords.snp.makeConstraints {
+            $0.leading.trailing.equalTo(safeAreaLayoutGuide).inset(16)
+            $0.top.equalTo(keywordLabel.snp.bottom).offset(6)
+        }
+        
         dateLabel.snp.makeConstraints {
-            $0.top.equalTo(keywordLabel.snp.bottom).offset(55)
+            $0.top.equalTo(keywords.snp.bottom).offset(55)
             $0.leading.equalTo(safeAreaLayoutGuide).offset(16)
         }
     }
@@ -106,4 +128,59 @@ class NewMemoriesCollectionViewCell: UICollectionViewCell {
             endEditing(true)
     }
     
+}
+
+extension NewMemoriesCollectionViewCell: UICollectionViewDelegate {
+    
+}
+
+extension NewMemoriesCollectionViewCell: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return tags.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = keywords.dequeueReusableCell(withReuseIdentifier: LabelsCollectionViewCell.identifier, for: indexPath) as! LabelsCollectionViewCell
+        
+        cell.chipLabel.text = tags[indexPath.item]
+        cell.chipLabel.makeRound(radius: 13.25)
+        return cell
+    }
+}
+
+
+class CollectionViewLeftAlignFlowLayout: UICollectionViewFlowLayout {
+    let cellSpacing: CGFloat = 6
+    
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        self.minimumLineSpacing = 6
+        let attributes = super.layoutAttributesForElements(in: rect)
+        
+        var leftMargin = sectionInset.left
+        var maxY: CGFloat = -1.0
+        attributes?.forEach { layoutAttribute in
+            if layoutAttribute.frame.origin.y >= maxY {
+                leftMargin = sectionInset.left
+            }
+            layoutAttribute.frame.origin.x = leftMargin
+            leftMargin += layoutAttribute.frame.width + cellSpacing
+            maxY = max(layoutAttribute.frame.maxY, maxY)
+        }
+        
+        return attributes
+    }
+}
+
+class DynamicCollectionView: UICollectionView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if bounds.size != intrinsicContentSize {
+            invalidateIntrinsicContentSize()
+        }
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        return self.contentSize
+    }
 }

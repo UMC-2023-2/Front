@@ -22,6 +22,7 @@ class PPEditProfileImageView: UIButton {
         image.backgroundColor = R.Color.gray300
         image.image = R.Image.profileInfoContent
         image.isUserInteractionEnabled = false
+        image.contentMode = .scaleAspectFill
         return image
     } ()
     

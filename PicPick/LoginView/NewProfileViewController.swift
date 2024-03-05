@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 import SnapKit
 import PicPick_Resource
@@ -96,7 +97,29 @@ class NewProfileViewController: UIViewController {
     
     @objc
     func editProfileImageDidTapped(_ sender: PPEditProfileImageView) {
-        print("asdf")
+        var config = PHPickerConfiguration()
+        config.selectionLimit = 1
+        config.filter = PHPickerFilter.images
+        
+        let pickerViewController = PHPickerViewController(configuration: config)
+        pickerViewController.delegate = self
+        present(pickerViewController, animated: true)
     }
     
+}
+
+extension NewProfileViewController: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true)
+        
+        for result in results {
+            result.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { (object, error) in
+                if let image = object as? UIImage {
+                    DispatchQueue.main.async {
+                        self.profileImageView.profileImage.image = image
+                    }
+                }
+            })
+        }
+    }
 }

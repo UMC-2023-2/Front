@@ -411,5 +411,4 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return CGSize(width: 327, height: collectionViewHeight)
         
     }
-    
 }

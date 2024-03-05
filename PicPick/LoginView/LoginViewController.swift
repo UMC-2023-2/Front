@@ -160,8 +160,8 @@ extension LoginViewController {
             switch response {
             case .success(let data):
                 if let userData = data as? LoginResponse {
-                    KeyChain.create(key: R.String.KeyChainKey.accessToken, token: userData.result!.accessToken)
-                    KeyChain.create(key: R.String.KeyChainKey.refreshToken, token: userData.result!.refreshToken)
+                    KeyChain.create(key: R.String.KeyChainKey.accessToken, token: userData.accessToken)
+                    KeyChain.create(key: R.String.KeyChainKey.refreshToken, token: userData.refreshToken)
                     UserDefaults.standard.set(true, forKey: R.String.UserDefaultKey.isLoggedIn)
                     
                     let navigationViewController = PPNavigationController(rootViewController: HomeViewController())

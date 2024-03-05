@@ -364,13 +364,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Start With Friends"
+            "value" : "Setting Visibility"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "친구와 함께하기"
+            "value" : "표시 범위 설정"
           }
         }
       }
@@ -626,6 +626,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계정 생성"
+          }
+        }
+      }
+    },
+    "Visibility Settings Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visibility Settings"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "표시 설정"
           }
         }
       }

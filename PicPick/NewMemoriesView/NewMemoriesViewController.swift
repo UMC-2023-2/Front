@@ -13,6 +13,8 @@ import SnapKit
 
 class NewMemoriesViewController: UIViewController {
     
+    var images: [UIImage]?
+    
     lazy var nextButton = {
         let button = PPWhiteButton(buttonStyle: .bottom)
         button.setTitle(NSLocalizedString("New Memories Choose Album", comment: "New Memories Choose Album"), for: .normal)
@@ -22,8 +24,9 @@ class NewMemoriesViewController: UIViewController {
     
     lazy var pageCtrl = {
         let ctrl = UIPageControl()
-        ctrl.numberOfPages = 12
+        ctrl.numberOfPages = images?.count ?? 0
         ctrl.currentPage = 0
+        ctrl.allowsContinuousInteraction = false
         return ctrl
     } ()
     
@@ -60,7 +63,7 @@ class NewMemoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = R.Color.systemWhite
+        view.backgroundColor = R.Color.gray600
         
         removeBackBtnTitle()
         title = NSLocalizedString("New Memories Title", comment: "New Memories Page Title")
@@ -93,17 +96,7 @@ class NewMemoriesViewController: UIViewController {
         
         addTapGesture()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     private func addTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard(_:)))
         view.addGestureRecognizer(tapGesture)
@@ -118,11 +111,12 @@ class NewMemoriesViewController: UIViewController {
 
 extension NewMemoriesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return images?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewMemoriesCollectionViewCell.identifier, for: indexPath) as? NewMemoriesCollectionViewCell else { return UICollectionViewCell() }
+        cell.backgroudImage.image = images![indexPath.row]
         return cell
     }
     
@@ -133,7 +127,7 @@ extension NewMemoriesViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        pageCtrl.currentPage = indexPath.row
+        
     }
 }
 
@@ -152,5 +146,6 @@ extension NewMemoriesViewController: UICollectionViewDelegateFlowLayout {
         let index = round(scrolledOffsetX / cellWidth)
         targetContentOffset.pointee = CGPoint(x: index * cellWidth - scrollView.contentInset.left, y: scrollView.contentInset.top)
         view.endEditing(true)
+        pageCtrl.currentPage = Int(index)
     }
 }

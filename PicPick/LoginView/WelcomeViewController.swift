@@ -53,7 +53,6 @@ class WelcomeViewController: UIViewController {
         return button
     } ()
     
-    
     lazy var signupButton: PPButton = {
         let button = PPButton(buttonStyle: .bottom)
         button.configuration?.baseForegroundColor = R.Color.gray300
@@ -79,13 +78,17 @@ class WelcomeViewController: UIViewController {
         return view
     } ()
     
+    lazy var visualEffectView: UIVisualEffectView = {
+        let blurEffect = UIBlurEffect(style: .dark)
+        let view = UIVisualEffectView(effect: blurEffect)
+
+        return view
+    } ()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         removeBackBtnTitle()
-        
-        let blurEffect = UIBlurEffect(style: .dark)
-        let visualEffectView = UIVisualEffectView(effect: blurEffect)
         
         // Do any additional setup after loading the view.
         view.insertSubview(backgroundImage, at: 0)

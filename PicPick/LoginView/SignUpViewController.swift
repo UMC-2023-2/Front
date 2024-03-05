@@ -14,6 +14,7 @@ import SnapKit
 class SignUpViewController: UIViewController {
     
     var email = String()
+    var emailIsValid: Bool = false
     var password = String()
     var reEnterPassword = String()
     
@@ -36,9 +37,15 @@ class SignUpViewController: UIViewController {
         textField.becomeFirstResponder()
         textField.textContentType = .emailAddress
         textField.keyboardType = .asciiCapable
-        textField.addTarget(self, action: #selector(usernameDidChange(_:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(emailDidChange(_:)), for: .editingChanged)
         textField.returnKeyType = .done
         return textField
+    } ()
+    
+    lazy var emailIsValidLabel: UILabel = {
+        let label = UILabel()
+        label.font = PPFont.captionLarge500.font
+        return label
     } ()
     
     lazy var pwLabel: UILabel = {
@@ -78,11 +85,12 @@ class SignUpViewController: UIViewController {
         return textField
     } ()
     
-    lazy var checkIdButton: PPBlackButton = {
+    lazy var checkEmailButton: PPBlackButton = {
         let button = PPBlackButton(buttonStyle: .textfield)
         
         button.setTitle(NSLocalizedString("SignUp Email Check Button", comment: "SignUp page ID check avilavility button"), for: .normal)
-        
+        button.addTarget(self, action: #selector(checkEmailDidTap(_:)), for: .touchUpInside)
+        button.isEnabled = emailIsValid
         return button
     } ()
     
@@ -104,7 +112,8 @@ class SignUpViewController: UIViewController {
         
         inputFormView.addSubview(emailLabel)
         inputFormView.addSubview(emailTextField)
-        inputFormView.addSubview(checkIdButton)
+        inputFormView.addSubview(checkEmailButton)
+        inputFormView.addSubview(emailIsValidLabel)
         inputFormView.addSubview(pwLabel)
         inputFormView.addSubview(pwTextField)
         inputFormView.addSubview(rePasswordLabel)
@@ -129,12 +138,17 @@ class SignUpViewController: UIViewController {
             $0.height.equalTo(48)
         }
         
-        checkIdButton.snp.makeConstraints {
+        checkEmailButton.snp.makeConstraints {
             $0.top.equalTo(emailTextField)
             $0.width.equalTo(87)
             $0.height.equalTo(48)
             $0.leading.equalTo(emailTextField.snp.trailing).offset(8)
             $0.trailing.equalTo(view.safeAreaLayoutGuide).offset(-16)
+        }
+        
+        emailIsValidLabel.snp.makeConstraints {
+            $0.top.equalTo(emailTextField.snp.bottom).offset(6)
+            $0.leading.equalTo(emailTextField.snp.leading).offset(16)
         }
         
         pwLabel.snp.makeConstraints {
@@ -171,42 +185,63 @@ class SignUpViewController: UIViewController {
         signupBtn.addTarget(self, action: #selector(signupButtonDidTap(_:)), for: .touchUpInside)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     @objc
     func signupButtonDidTap(_ sender: PPBlackButton) {
         self.navigationController?.pushViewController(NewProfileViewController(), animated: true)
     }
     
     @objc
-    func usernameDidChange(_ sender: PPTextField) {
+    func emailDidChange(_ sender: PPTextField) {
         email = sender.text ?? ""
-        signupBtn.isEnabled = checkValid(email, password, reEnterPassword)
+        checkEmailButton.isEnabled = email.isValidEmail()
+        emailIsValidLabel.text = nil
+        emailIsValid = false
+        signupBtn.isEnabled = checkValid(password, reEnterPassword)
     }
     
     @objc
     func passwordDidChange(_ sender: PPTextField) {
         password = sender.text ?? ""
-        signupBtn.isEnabled = checkValid(email, password, reEnterPassword)
+        signupBtn.isEnabled = checkValid(password, reEnterPassword)
     }
     
     @objc
     func reEnterPasswordDidChange(_ sender: PPTextField) {
         reEnterPassword = sender.text ?? ""
-        signupBtn.isEnabled = checkValid(email, password, reEnterPassword)
+        signupBtn.isEnabled = checkValid(password, reEnterPassword)
     }
     
-    func checkValid(_ username: String,_ password: String,_ reEnterPassword: String) -> Bool {
-        return (username.count > 2) && (password.count > 2) && (password == reEnterPassword)
+    @objc
+    func checkEmailDidTap(_ sender: PPButton) {
+        UserService.shared.isDuplicate(email: email) { response in
+            switch response {
+            case .success(let data):
+                if let data = data as? IsDuplicateResponse {
+                    if(data.isDuplicate) {
+                        self.emailIsValid = false
+                        self.emailIsValidLabel.text = "*존재하는 이메일 입니다."
+                        self.emailIsValidLabel.textColor = R.Color.systemRed
+                    } else {
+                        self.emailIsValid = true
+                        self.emailIsValidLabel.text = "*사용 가능한 이메일 입니다."
+                        self.emailIsValidLabel.textColor = R.Color.pointNormal
+                    }
+                }
+                self.signupBtn.isEnabled = self.checkValid(self.password, self.reEnterPassword)
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    func checkValid(_ password: String,_ reEnterPassword: String) -> Bool {
+        return (emailIsValid) && (password.count > 2) && (password == reEnterPassword)
     }
 
 }

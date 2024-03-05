@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             mainView = WelcomeViewController()
         }
         
-        let navigationViewController = PPNavigationController(rootViewController: mainView)
+        let navigationViewController = PPNavigationController(rootViewController: HomeViewController())
         
         window.rootViewController = navigationViewController
         window.makeKeyAndVisible()
